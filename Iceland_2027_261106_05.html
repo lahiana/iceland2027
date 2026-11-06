@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<title>2027 冰島完整行程｜261106 更新版</title>
+<style>
+:root{--ink:#203433;--muted:#687a77;--deep:#173B4A;--green:#2A7669;--sea:#EAF1F3;--paper:#F3F6F2;--line:#DCE5E0;--white:#fff;--sand:#F8F1E4;--gold:#9A743D;--shadow:0 16px 42px rgba(24,55,54,.08);}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:100px} body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.72}
+a{color:#236d62;text-decoration:none} a:hover{text-decoration:underline}
+.page{max-width:1120px;margin:auto;padding:28px 24px 72px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(130deg,#173B4A 0%,#245d5d 100%);color:#fff;border-radius:28px;padding:36px 38px;margin-bottom:22px;box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-120px;top:-220px;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 78px rgba(255,255,255,.025)}
+.eyebrow,.section-eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;color:#a8d6c6} h1{font-size:clamp(30px,5vw,48px);line-height:1.18;margin:10px 0 12px;letter-spacing:-.03em} .hero p{margin:0;color:rgba(255,255,255,.82);max-width:720px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px;position:relative;z-index:1} .stat{padding:12px 14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:15px} .stat span{display:block;color:rgba(255,255,255,.68);font-size:11px} .stat strong{display:block;margin-top:3px;font-size:17px}
+.quicknav{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow-x:auto;padding:12px 2px;margin:0 0 18px;background:rgba(243,246,242,.94);backdrop-filter:blur(12px);scrollbar-width:thin} .quicknav a{white-space:nowrap;background:#fff;border:1px solid var(--line);padding:7px 13px;border-radius:999px;font-weight:700;font-size:13px;color:var(--deep)} .quicknav a:hover{background:#e7f1ec;text-decoration:none}
+.trip-meta{list-style:none;padding:0;margin:18px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:9px} .trip-meta li{background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px 14px;font-size:13px} .trip-meta strong{color:var(--deep)}
+.intro-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:18px 0 26px;box-shadow:0 5px 18px rgba(24,55,54,.035)}
+.section-heading{font-size:19px;margin:0 0 8px;color:var(--deep)} .intro-panel ul{margin:6px 0 0;padding-left:22px} .intro-panel li{margin:6px 0;color:#435856}
+.map-section{margin:28px 0 34px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)} .section-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px} .section-top h2{font-size:24px;margin:3px 0;color:var(--deep)} .section-top p{margin:0;color:var(--muted);font-size:13px} .section-eyebrow{color:var(--green)} .map-tag{white-space:nowrap;background:#eef5f0;color:#38655b;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:800}
+.map-frame{background:var(--sea);border:1px solid #d6e3e6;border-radius:19px;overflow:hidden} .map-scroll{overflow-x:auto;overscroll-behavior-x:contain} .iceland-map{display:block;width:100%;height:auto;min-width:680px} .iceland-map .grid-label{font:600 13px Arial,sans-serif;fill:#81949a} .iceland-map .island-label{font:800 36px Arial,sans-serif;letter-spacing:7px;fill:#8fa49a;opacity:.34;text-anchor:middle} .iceland-map .sea-label{font:700 13px Arial,sans-serif;letter-spacing:2px;fill:#91a7ae;opacity:.8} .iceland-map .north-label{font:800 18px Arial,sans-serif;fill:#46645d} .point-badge circle{stroke:#fff;stroke-width:2.3} .point-badge rect{stroke:#fff;stroke-width:2.3} .point-badge.active circle,.point-badge.active rect{fill:#1E6258} .point-badge.alt circle,.point-badge.alt rect{fill:#9A743D} .point-badge text{font:800 18px "Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle} .home-badge rect{fill:#173B4A;stroke:#fff;stroke-width:2.3} .home-badge text{font:800 16px Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+.map-legend{display:flex;flex-wrap:wrap;gap:18px;margin:13px 2px 4px;font-size:12px;color:#536966} .map-legend span{display:inline-flex;align-items:center;gap:7px} .legend-dot{width:11px;height:11px;border-radius:50%;display:inline-block} .legend-dot.main{background:#1E6258} .legend-dot.alt{background:#9A743D} .legend-home{width:20px;height:17px;border-radius:5px;background:#173B4A;color:#fff;font:bold 10px Arial;display:inline-grid;place-items:center} .map-note{font-size:11px;color:var(--muted);margin:10px 2px 0}
+.day-panel,.resource-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;margin:22px 0;box-shadow:0 8px 26px rgba(24,55,54,.045)} .day-panel-head{display:flex;align-items:center;gap:13px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid #e8eeea} .day-kicker{background:var(--deep);color:#fff;border-radius:10px;padding:6px 10px;font-size:11px;font-weight:900;letter-spacing:.07em;white-space:nowrap} .day-panel-head h2{font-size:21px;line-height:1.35;margin:0;color:var(--deep)}
+.day-panel>p{margin:7px 0;color:#516461;font-size:14px} .day-panel>p strong{color:var(--deep)} .day-panel h3{font-size:16px;color:var(--green);margin:20px 0 10px} .day-panel h4{font-size:14px;color:var(--deep);margin:18px 0 8px}
+.day-panel ol{counter-reset:route;list-style:none;padding:0;margin:8px 0 16px;position:relative} .day-panel ol>li{counter-increment:route;position:relative;background:#fbfcfa;border:1px solid #e4ece6;border-radius:15px;padding:13px 16px 13px 60px;margin:0 0 9px;color:#425652;font-size:14px} .day-panel ol>li:before{content:counter(route);position:absolute;left:15px;top:13px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#e3f0e9;color:#24685e;font-weight:900;font-size:13px} .day-panel ol>li strong{color:#173f42} .day-panel ol>li p{margin:5px 0 0}
+.day-panel ul{padding-left:22px;color:#536661} .day-panel ul li{margin:5px 0} .day-panel blockquote{margin:14px 0;padding:13px 16px;border-left:4px solid #c69a55;background:#fbf5e9;border-radius:0 12px 12px 0;color:#6d5838;font-size:13px} .day-panel blockquote p{margin:4px 0} .day-panel hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.resource-panel h2{font-size:21px;color:var(--deep);margin:0 0 15px;padding-bottom:12px;border-bottom:1px solid #e7eeea} .resource-panel h3{font-size:15px;color:var(--green);margin:20px 0 8px} .resource-panel p,.resource-panel li{font-size:13px;color:#536661} .resource-panel li{margin:5px 0} .resource-panel ul,.resource-panel ol{padding-left:22px} .resource-panel blockquote{background:#f5f8f4;padding:13px 16px;border-radius:12px;color:#5c716a;font-size:13px}
+.table-wrap{overflow-x:auto;margin:12px 0 18px} table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px;background:#fff} th{background:#edf4ef;color:#274d47;text-align:left;font-weight:800} th,td{padding:10px 11px;border-bottom:1px solid #e2eae4;vertical-align:top} tr:last-child td{border-bottom:0} tbody tr:hover{background:#fafcf9}
+.resource-panel table{display:table} .resource-panel p code{background:#f0f4f0;border-radius:5px;padding:2px 5px}
+.footer{text-align:center;color:#7c8c88;font-size:11px;margin:30px 0 5px}
+@media(max-width:760px){.page{padding:14px 12px 44px} .hero{padding:25px 20px;border-radius:21px} .hero-stats{grid-template-columns:repeat(2,1fr)} .trip-meta{grid-template-columns:1fr 1fr} .map-section{padding:14px;border-radius:18px} .section-top{align-items:flex-start;flex-direction:column;gap:8px} .day-panel,.resource-panel{padding:17px 14px;border-radius:18px} .day-panel-head h2{font-size:18px} .day-panel ol>li{padding:12px 12px 12px 52px} .day-panel ol>li:before{left:12px}}
+@media(max-width:420px){.trip-meta{grid-template-columns:1fr} .hero-stats{grid-template-columns:1fr 1fr} .stat strong{font-size:14px}}
+@media print{body{background:#fff} .page{max-width:none;padding:0} .quicknav{display:none} .hero,.map-section,.day-panel,.resource-panel{box-shadow:none;break-inside:avoid} .day-panel{break-inside:auto} .map-frame{break-inside:avoid} a{color:inherit;text-decoration:none}}
+
+.editor-note{font-size:12px!important;color:#6d5838!important;background:#fbf5e9;border-radius:10px;padding:10px 13px;margin-top:12px!important}
+
+.shopping-note{margin:15px 0 4px;padding:14px 16px;border:1px solid #d9e5de;border-left:4px solid #2f7667;border-radius:12px;background:#f7faf7;color:#334b46;font-size:13px;line-height:1.75}.shopping-note strong{display:block;color:#1c5148;margin-bottom:4px;font-size:14px}.shopping-note p{margin:0}.shopping-note a{color:#1d665b;text-decoration:underline;text-underline-offset:2px}.accommodation-status{margin:8px 0 14px;padding:12px 15px;background:#f5f8f6;border:1px solid #dce6e0;border-radius:12px;color:#405650;font-size:13px;line-height:1.65}
+.budget-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0 18px}.budget-metric{padding:15px 16px;border:1px solid #dce6e0;border-radius:14px;background:#f6faf7}.budget-metric span{display:block;color:#657873;font-size:11px;font-weight:700}.budget-metric strong{display:block;color:#173f42;font-size:20px;margin-top:4px;line-height:1.35}.budget-metric small{display:block;color:#71817b;font-size:11px;margin-top:3px}.budget-callout{margin:14px 0;padding:13px 16px;border-left:4px solid #b58b4c;background:#fbf6ec;border-radius:0 12px 12px 0;color:#695638;font-size:13px}.budget-subhead{font-size:15px;color:var(--green);margin:20px 0 8px}.budget-footnote{font-size:12px!important;color:#697a75!important}.budget-table td.num,.budget-table th.num{text-align:right;white-space:nowrap}@media(max-width:760px){.budget-summary{grid-template-columns:1fr 1fr}}@media(max-width:420px){.budget-summary{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="hero">
+<div class="eyebrow">ICELAND ROAD TRIP · 2027</div>
+<h1>2027 冰島自駕完整行程</h1>
+<p>南岸、東南冰河湖、黃金圈與斯奈山半島｜依固定住宿 H1–H8 安排，並保留 Silfra 與 Melrakki 候補方案。</p>
+<div class="hero-stats">
+<div class="stat"><span>旅遊日期</span><strong>3/7–3/15</strong></div>
+<div class="stat"><span>旅遊天數</span><strong>9 天 8 夜</strong></div>
+<div class="stat"><span>旅遊人數</span><strong>3 人自駕</strong></div>
+<div class="stat"><span>固定住宿</span><strong>H1–H8</strong></div>
+</div>
+</header>
+<nav class="quicknav"><a href="#map">全程地圖</a><a href="#day-1">Day 1</a><a href="#day-2">Day 2</a><a href="#day-3">Day 3</a><a href="#day-4">Day 4</a><a href="#day-5">Day 5</a><a href="#day-6">Day 6</a><a href="#day-7">Day 7</a><a href="#day-8">Day 8</a><a href="#day-9">Day 9</a><a href="#resources-1">景點座標</a><a href="#resources-2">住宿一覽</a><a href="#resources-7">預算總覽</a><a href="#resources-3">出發檢查</a><a href="#resources-4">預訂清單</a><a href="#resources-6">活動廠商附件</a><a href="#resources-5">參考資料</a></nav>
+<main>
+<section class="intro-panel">
+<ul class="trip-meta">
+<li class="meta-item"><strong>旅遊日期：</strong> 2027/3/7（日）至 2027/3/15（一），共 8 晚</li>
+<li class="meta-item"><strong>旅遊人數：</strong> 3 人</li>
+<li class="meta-item"><strong>交通方式：</strong> 冬季自駕</li>
+<li class="meta-item"><strong>浮潛：</strong> DIVE.IS｜Silfra Snorkeling Tour</li>
+<li class="meta-item"><strong>冰洞與冰川：</strong> Melrakki Adventures｜Jökulsárlón Ice Cave &amp; Glacier Hike</li>
+<li class="meta-item"><strong>Silfra 安排：</strong> 3/8 首次預約；若取消，3/14 為唯一候補日</li>
+<li class="meta-item"><strong>Melrakki 安排：</strong> 3/11 首次預約；若取消，3/12 為唯一候補日</li>
+</ul>
+<h2 class="section-heading">行程安排原則</h2>
+<ul>
+<li>一般觀光日以 <strong>08:30 出發</strong>為基準，住宿目標約 <strong>18:30 抵達</strong>；每日會依實際路況調整，不為了趕入住時間而超速或疲勞駕駛。</li>
+<li>各景點依路線先後排列，只列出<strong>前往下一站的單程估計車程</strong>，不預先指定每個景點的抵達及離開時間。</li>
+<li>Silfra、Melrakki 等預約活動，以業者確認的集合時間及場次為準，不套用 08:30 出發基準。</li>
+<li>H1–H7 仍依既定區域安排，實際住宿尚待選定；H8（3/14）已確定入住 Aurora Hotel at Reykjavik-Keflavik Airport。</li>
+<li>冰島馬不安排馬場或付費體驗；若沿途看見，只在合法、安全的停車處遠距離拍照，不進入私人牧場、不餵食、不觸摸，也不保證一定看得到。</li>
+</ul>
+<hr/>
+<ul>
+<li>DIVE.IS｜Silfra Snorkeling Tour：<a href="https://www.dive.is/diving-snorkeling-tours/snorkeling-day-tours/silfra-snorkeling-day-tour" rel="noopener noreferrer" target="_blank">https://www.dive.is/diving-snorkeling-tours/snorkeling-day-tours/silfra-snorkeling-day-tour</a></li>
+<li>Melrakki Adventures｜Jökulsárlón Ice Cave &amp; Glacier Hike：<a href="https://melrakki.com/jokulsarlon-ice-cave-and-glacier-hike/" rel="noopener noreferrer" target="_blank">https://melrakki.com/jokulsarlon-ice-cave-and-glacier-hike/</a></li>
+<li>Brúarfoss 停車資訊：<a href="https://bruarfoss.is/parking-at-bruarfoss/" rel="noopener noreferrer" target="_blank">https://bruarfoss.is/parking-at-bruarfoss/</a></li>
+<li>Brúarfoss 傳統健行步道資訊：<a href="https://bruarfoss.is/hiking-to-bruarfoss/" rel="noopener noreferrer" target="_blank">https://bruarfoss.is/hiking-to-bruarfoss/</a></li>
+<li>Vegagerðin 冬季駕駛安全資訊：<a href="https://www.vegagerdin.is/en/home/exploring-iceland/driving-safely-in-iceland" rel="noopener noreferrer" target="_blank">https://www.vegagerdin.is/en/home/exploring-iceland/driving-safely-in-iceland</a></li>
+<li>冰島道路狀況：<a href="https://umferdin.is/" rel="noopener noreferrer" target="_blank">https://umferdin.is/</a></li>
+<li>冰島氣象局：<a href="https://en.vedur.is/" rel="noopener noreferrer" target="_blank">https://en.vedur.is/</a></li>
+<li>SafeTravel：<a href="https://safetravel.is/" rel="noopener noreferrer" target="_blank">https://safetravel.is/</a></li>
+</ul>
+<blockquote>
+<p>本行程中的車程為規劃估算，非即時導航承諾。2027 年 3 月的實際道路、天候、景點開放狀況及旅行團時數，請以出發當日官方資訊、現場標示及業者通知為準。</p>
+</blockquote>
+</section>
+<section class="map-section" id="map">
+<div class="section-top"><div><div class="section-eyebrow">ROUTE OVERVIEW</div><h2>冰島地圖與行程編號</h2><p>地圖只標示本次排入的景點與 H1–H8 住宿區域；未排入景點不顯示，並集中列於座標表最後。</p></div><span class="map-tag">WGS84 位置示意</span></div>
+<div class="map-frame"><div class="map-scroll"><svg aria-label="冰島地圖，標示本次排入的 27 個景點及 H1 至 H8 住宿區域" class="iceland-map" role="img" viewbox="0 0 1120 790" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#EAF1F3" height="790" rx="26" width="1120" x="0" y="0"></rect>
+<style>.point-badge circle,.point-badge rect{stroke:#fff;stroke-width:2.3}.point-badge.active circle,.point-badge.active rect{fill:#1E6258}.point-badge.alt circle,.point-badge.alt rect{fill:#9A743D}.point-badge text{font:800 17px Arial,'Noto Sans TC',sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.home-badge rect{fill:#173B4A;stroke:#fff;stroke-width:2.3}.home-badge text{font:800 16px Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}</style>
+<polyline fill="none" points="-0.4,576.2 92.2,584.3 185.0,590.9 277.9,596.0 370.9,599.7 463.9,601.9 556.9,602.7 649.9,601.9 742.9,599.7 835.9,596.0 928.7,590.9 1021.5,584.3 1114.2,576.2" stroke="#CAD9DE" stroke-dasharray="5 8" stroke-width="1.2"></polyline>
+<text class="grid-label" x="20.1" y="572.9">64°N</text>
+<polyline fill="none" points="19.7,365.0 109.0,372.8 198.4,379.1 288.0,384.1 377.6,387.6 467.2,389.8 556.9,390.5 646.6,389.8 736.2,387.6 825.8,384.1 915.3,379.1 1004.8,372.8 1094.1,365.0" stroke="#CAD9DE" stroke-dasharray="5 8" stroke-width="1.2"></polyline>
+<text class="grid-label" x="39.5" y="361.6">65°N</text>
+<polyline fill="none" points="39.8,153.7 125.8,161.2 211.9,167.4 298.0,172.1 384.3,175.6 470.6,177.6 556.9,178.3 643.2,177.6 729.5,175.6 815.7,172.1 901.9,167.4 988.0,161.2 1074.0,153.7" stroke="#CAD9DE" stroke-dasharray="5 8" stroke-width="1.2"></polyline>
+<text class="grid-label" x="59.0" y="150.3">66°N</text>
+<polyline fill="none" points="75.5,795.9 83.8,690.1 92.2,584.3 100.6,478.5 109.0,372.8 117.4,267.0 125.8,161.2 134.1,55.4 142.5,-50.4" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<polyline fill="none" points="267.8,808.1 272.9,702.0 277.9,596.0 282.9,490.1 288.0,384.1 293.0,278.1 298.0,172.1 303.1,66.1 308.1,-39.9" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<polyline fill="none" points="460.5,814.2 462.2,708.0 463.9,601.9 465.5,495.8 467.2,389.8 468.9,283.7 470.6,177.6 472.3,71.5 473.9,-34.6" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<polyline fill="none" points="653.3,814.2 651.6,708.0 649.9,601.9 648.2,495.8 646.6,389.8 644.9,283.7 643.2,177.6 641.5,71.5 639.8,-34.6" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<polyline fill="none" points="845.9,808.1 840.9,702.0 835.9,596.0 830.8,490.1 825.8,384.1 820.8,278.1 815.7,172.1 810.7,66.1 805.7,-39.9" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<polyline fill="none" points="1038.3,795.9 1029.9,690.1 1021.5,584.3 1013.2,478.5 1004.8,372.8 996.4,267.0 988.0,161.2 979.6,55.4 971.2,-50.4" stroke="#D5E0E3" stroke-dasharray="3 8" stroke-width="1"></polyline>
+<path d="M 744.3,643.5 L 744.4,643.6 L 729.3,645.3 L 728.0,641.3 L 724.7,645.7 L 723.9,640.5 L 720.3,645.1 L 717.9,643.5 L 717.0,646.4 L 716.2,644.7 L 708.8,649.3 L 711.3,646.6 L 708.6,646.4 L 700.6,652.5 L 699.7,648.1 L 699.0,650.9 L 697.2,648.5 L 698.9,653.1 L 689.9,656.6 L 693.2,653.4 L 692.5,647.9 L 691.5,653.3 L 687.7,653.6 L 689.1,657.1 L 676.2,665.8 L 679.6,659.0 L 687.6,655.3 L 681.0,651.9 L 678.7,653.3 L 676.8,650.2 L 676.7,656.7 L 666.9,654.6 L 670.2,658.1 L 659.5,661.7 L 660.8,671.3 L 652.4,673.0 L 656.7,675.0 L 660.9,671.9 L 667.7,674.8 L 672.4,670.2 L 664.2,682.4 L 652.8,678.1 L 660.1,682.2 L 654.5,682.1 L 655.1,680.1 L 652.7,682.4 L 653.7,684.9 L 656.1,683.2 L 654.4,686.9 L 663.4,686.2 L 667.1,680.4 L 662.3,690.4 L 641.3,694.1 L 637.4,698.6 L 649.2,694.5 L 632.4,704.7 L 628.9,702.1 L 628.7,707.4 L 627.8,701.2 L 625.5,702.1 L 623.1,698.6 L 623.4,701.6 L 619.2,695.1 L 618.6,695.1 L 623.0,702.2 L 624.9,717.5 L 636.7,715.8 L 596.4,725.6 L 590.8,729.5 L 588.5,724.2 L 590.1,729.6 L 582.2,732.0 L 574.6,728.6 L 574.8,730.6 L 570.2,729.9 L 570.0,724.9 L 569.1,729.6 L 558.0,726.6 L 553.9,730.1 L 547.8,728.5 L 552.0,728.1 L 546.0,723.7 L 543.2,724.3 L 544.1,727.1 L 538.1,725.6 L 547.5,728.2 L 544.8,730.1 L 485.0,702.6 L 456.8,701.0 L 456.2,696.2 L 455.7,700.4 L 453.6,698.3 L 455.2,700.9 L 444.0,699.0 L 428.2,684.9 L 433.8,687.0 L 430.1,681.0 L 427.3,684.3 L 422.5,678.6 L 426.4,681.8 L 428.3,680.0 L 421.4,674.2 L 420.0,668.7 L 416.9,669.6 L 422.1,678.2 L 411.5,667.9 L 409.2,663.8 L 410.8,661.1 L 412.2,662.8 L 411.9,654.2 L 408.3,662.9 L 410.9,668.0 L 388.3,648.6 L 395.3,648.7 L 401.2,653.1 L 399.6,650.2 L 406.2,652.0 L 401.1,649.3 L 405.3,646.8 L 399.8,649.7 L 395.6,647.0 L 400.4,640.7 L 398.3,622.0 L 396.5,629.0 L 399.0,634.9 L 391.8,644.1 L 384.4,644.0 L 388.1,648.3 L 374.3,637.4 L 364.4,635.2 L 351.5,625.4 L 350.2,614.0 L 365.5,612.0 L 349.0,611.1 L 351.6,611.3 L 341.3,616.9 L 350.8,625.6 L 338.1,624.4 L 334.1,631.8 L 327.3,630.7 L 308.5,635.4 L 297.9,625.4 L 284.2,631.0 L 270.6,631.7 L 255.2,630.4 L 244.4,624.9 L 239.2,631.2 L 236.6,627.9 L 232.8,630.8 L 229.0,629.7 L 226.6,633.3 L 217.3,631.0 L 210.0,634.8 L 207.1,630.4 L 211.2,622.8 L 207.7,616.0 L 212.8,606.6 L 218.4,605.3 L 211.8,603.6 L 207.0,598.3 L 211.8,591.3 L 214.6,574.4 L 226.7,586.5 L 227.7,598.7 L 240.9,600.1 L 244.1,591.4 L 248.0,592.2 L 253.8,587.9 L 260.9,591.8 L 266.8,586.2 L 274.2,586.8 L 278.7,581.7 L 282.5,581.6 L 275.7,575.9 L 278.0,575.2 L 274.6,575.2 L 276.0,572.2 L 279.9,570.0 L 282.9,573.8 L 278.2,574.5 L 284.9,575.9 L 287.5,573.8 L 284.7,571.8 L 288.0,571.0 L 275.9,562.6 L 278.5,560.9 L 282.7,563.8 L 285.1,561.6 L 287.1,565.1 L 290.9,563.3 L 293.5,569.2 L 298.0,569.3 L 295.3,565.5 L 298.6,562.5 L 295.7,559.7 L 300.8,563.4 L 307.5,559.3 L 300.2,559.2 L 301.3,555.1 L 306.6,553.2 L 296.0,552.7 L 295.1,545.8 L 290.8,548.4 L 288.0,546.6 L 295.3,535.1 L 305.8,524.1 L 317.6,525.1 L 310.9,521.8 L 319.4,517.6 L 321.6,520.5 L 332.4,522.5 L 340.8,516.4 L 331.0,519.3 L 334.2,516.7 L 332.6,513.9 L 314.6,511.7 L 289.6,531.0 L 281.5,532.4 L 274.4,528.0 L 272.3,529.8 L 282.9,516.7 L 294.3,516.4 L 293.3,512.6 L 291.3,514.8 L 287.4,511.4 L 283.1,516.0 L 278.0,509.5 L 286.9,487.9 L 293.7,483.9 L 304.0,483.2 L 299.0,480.5 L 309.8,469.2 L 298.4,474.1 L 294.3,479.0 L 294.1,476.3 L 289.8,483.2 L 291.1,478.0 L 286.5,479.9 L 285.4,483.9 L 280.7,485.8 L 282.5,474.2 L 279.1,485.5 L 275.5,487.9 L 274.9,496.0 L 272.4,493.9 L 267.8,497.7 L 269.1,494.4 L 265.7,497.1 L 262.1,494.8 L 264.7,489.5 L 262.6,487.6 L 262.6,493.5 L 261.5,489.6 L 260.1,492.7 L 261.0,485.4 L 264.2,481.5 L 260.1,475.3 L 263.4,470.3 L 255.9,476.8 L 251.3,475.3 L 252.9,462.7 L 243.4,453.9 L 245.2,451.9 L 244.6,454.4 L 251.6,458.0 L 254.7,456.6 L 251.4,456.6 L 253.5,450.7 L 257.0,451.1 L 253.1,449.6 L 254.3,446.4 L 246.6,452.1 L 257.4,435.5 L 253.7,431.1 L 245.3,432.0 L 248.9,426.6 L 244.5,427.7 L 248.7,425.3 L 248.9,420.3 L 247.3,424.3 L 244.6,424.5 L 244.3,421.6 L 240.2,424.6 L 239.0,421.9 L 232.1,427.4 L 235.8,428.4 L 226.8,430.0 L 223.6,427.1 L 229.2,426.7 L 225.1,425.8 L 223.2,417.2 L 222.3,421.4 L 217.3,422.6 L 222.3,428.9 L 210.0,420.9 L 204.4,423.2 L 196.6,419.9 L 193.2,421.9 L 162.3,412.3 L 160.4,419.2 L 143.8,417.1 L 151.2,416.4 L 148.2,414.6 L 143.8,415.9 L 136.8,430.1 L 122.6,432.1 L 112.1,426.0 L 103.0,403.3 L 103.0,396.1 L 108.2,397.4 L 114.8,390.3 L 121.4,389.1 L 139.3,398.2 L 143.8,393.1 L 150.8,393.2 L 154.4,385.8 L 163.2,385.7 L 161.1,387.3 L 165.1,389.1 L 162.7,384.2 L 166.3,382.4 L 168.9,387.3 L 167.3,390.5 L 170.3,387.3 L 170.1,392.8 L 176.9,393.8 L 179.5,388.2 L 177.7,378.7 L 182.4,375.4 L 191.3,377.6 L 183.3,389.0 L 186.2,394.8 L 189.3,396.4 L 188.9,384.8 L 196.6,388.4 L 195.8,395.3 L 198.8,389.3 L 192.8,385.7 L 195.3,379.8 L 202.6,377.2 L 206.0,382.4 L 207.0,379.1 L 218.9,376.8 L 220.6,373.5 L 217.2,375.4 L 210.7,372.6 L 216.5,370.6 L 215.0,372.6 L 224.2,363.8 L 223.0,368.4 L 226.4,366.0 L 227.9,368.5 L 225.0,370.8 L 229.2,371.1 L 221.7,376.1 L 228.5,374.1 L 228.3,379.9 L 235.9,387.1 L 233.2,377.0 L 241.3,370.4 L 250.0,372.3 L 259.4,368.8 L 263.0,372.8 L 268.6,373.3 L 269.5,376.6 L 277.1,377.8 L 279.2,374.7 L 306.0,379.4 L 308.6,373.2 L 303.6,370.0 L 310.5,364.2 L 309.5,361.2 L 315.6,351.4 L 313.0,341.4 L 306.6,341.5 L 304.9,349.4 L 290.9,359.2 L 283.3,360.8 L 266.9,356.4 L 254.3,345.8 L 249.2,350.7 L 247.3,347.8 L 239.9,347.5 L 240.9,343.7 L 244.0,345.8 L 247.0,343.9 L 244.2,345.5 L 244.8,341.9 L 250.2,342.7 L 245.5,339.7 L 236.1,341.7 L 244.8,339.1 L 247.1,330.8 L 253.8,329.3 L 256.5,323.5 L 258.0,325.3 L 260.5,322.4 L 258.9,320.4 L 276.5,315.1 L 288.7,304.2 L 295.1,302.9 L 296.0,298.9 L 299.5,302.4 L 297.4,298.7 L 301.2,294.9 L 312.9,295.4 L 320.7,288.7 L 313.4,291.5 L 303.7,287.9 L 296.8,290.3 L 300.3,284.7 L 292.5,276.1 L 288.5,283.7 L 286.7,272.5 L 283.8,270.9 L 282.5,280.6 L 274.4,293.0 L 271.7,289.4 L 268.8,290.8 L 269.4,288.4 L 266.3,290.0 L 266.5,285.7 L 260.0,282.2 L 259.0,278.0 L 261.3,274.8 L 276.0,271.4 L 286.2,255.8 L 280.7,258.8 L 275.0,269.2 L 268.3,272.2 L 263.2,270.8 L 268.0,266.4 L 268.6,261.2 L 260.5,270.9 L 257.2,264.3 L 257.9,271.7 L 251.6,274.9 L 247.0,245.2 L 246.6,266.5 L 244.6,269.3 L 241.5,267.6 L 240.2,249.1 L 237.6,270.5 L 234.3,270.1 L 231.6,256.8 L 236.2,246.1 L 231.2,250.7 L 226.9,246.8 L 229.7,275.4 L 224.0,273.0 L 227.0,270.7 L 225.5,268.9 L 216.9,267.3 L 220.0,266.7 L 216.9,264.1 L 226.4,252.9 L 220.1,246.6 L 220.5,254.2 L 217.3,259.8 L 213.9,259.6 L 212.1,249.3 L 208.3,261.8 L 202.8,265.8 L 194.1,262.0 L 193.9,253.7 L 188.5,261.7 L 190.1,268.9 L 186.4,274.4 L 173.3,272.5 L 169.6,266.5 L 171.0,272.0 L 153.7,276.9 L 148.0,276.7 L 149.9,275.5 L 147.5,273.8 L 147.3,279.0 L 140.0,286.8 L 120.0,285.6 L 117.7,276.6 L 120.2,279.4 L 121.6,273.8 L 114.1,272.9 L 105.6,266.5 L 117.3,275.9 L 102.2,265.5 L 74.6,265.8 L 71.2,262.6 L 78.6,254.5 L 86.3,252.7 L 86.6,243.5 L 92.6,234.4 L 116.0,253.3 L 123.3,254.8 L 121.5,255.3 L 127.8,263.5 L 137.9,261.3 L 129.1,259.5 L 113.9,238.2 L 113.4,234.3 L 125.7,237.4 L 138.8,247.4 L 135.6,241.6 L 132.5,242.2 L 127.7,234.4 L 115.7,225.0 L 112.1,212.8 L 114.2,201.4 L 121.2,203.5 L 129.9,212.0 L 155.5,227.6 L 154.5,232.4 L 157.8,231.0 L 160.1,238.5 L 158.2,247.3 L 163.8,240.6 L 166.1,244.0 L 166.3,239.9 L 172.7,244.8 L 174.5,243.0 L 171.6,237.8 L 185.1,234.0 L 168.5,232.6 L 162.1,223.2 L 179.4,220.1 L 189.8,222.0 L 187.9,217.4 L 193.7,214.6 L 192.7,212.1 L 183.6,216.1 L 162.6,216.1 L 147.8,210.0 L 138.2,197.7 L 135.4,186.3 L 138.3,179.9 L 142.9,178.6 L 155.4,185.2 L 159.7,190.7 L 167.8,189.1 L 171.9,194.6 L 193.9,200.4 L 172.2,191.7 L 169.1,186.0 L 161.5,183.9 L 142.0,160.5 L 142.1,154.3 L 148.1,147.6 L 173.0,160.4 L 175.5,158.8 L 175.1,165.6 L 180.5,168.8 L 176.0,158.5 L 168.2,154.1 L 156.4,139.3 L 167.3,135.6 L 181.7,147.4 L 173.0,136.3 L 162.4,133.0 L 168.8,125.7 L 173.9,125.7 L 174.4,122.6 L 191.4,127.8 L 194.5,135.5 L 196.5,133.5 L 201.7,137.3 L 204.2,145.8 L 203.3,151.4 L 198.2,152.8 L 199.1,156.9 L 209.6,145.7 L 213.5,149.2 L 213.6,163.2 L 204.1,174.0 L 208.4,173.2 L 217.5,157.0 L 218.3,169.5 L 222.3,159.9 L 224.6,160.4 L 220.7,174.8 L 212.1,186.6 L 226.7,167.7 L 223.8,191.4 L 229.7,179.3 L 232.5,157.7 L 236.6,160.1 L 240.4,157.5 L 241.2,164.7 L 249.0,174.6 L 238.8,206.4 L 243.5,201.7 L 253.4,173.5 L 254.5,181.3 L 256.9,184.1 L 257.6,179.9 L 258.9,182.5 L 258.1,193.4 L 260.2,185.0 L 261.4,190.1 L 255.2,205.5 L 245.3,215.4 L 258.8,205.6 L 264.1,191.3 L 267.7,190.6 L 262.4,169.8 L 256.8,163.8 L 260.8,162.1 L 258.7,157.2 L 263.0,152.7 L 255.1,153.2 L 248.1,146.6 L 227.7,136.6 L 219.9,129.1 L 216.8,119.0 L 225.6,116.8 L 227.8,113.3 L 236.6,112.6 L 243.4,117.8 L 249.7,117.8 L 254.9,124.5 L 253.0,116.6 L 256.2,119.1 L 256.3,116.8 L 269.8,113.2 L 252.5,113.2 L 253.6,109.4 L 262.3,104.4 L 258.3,99.4 L 258.6,102.3 L 251.3,109.2 L 241.0,105.8 L 244.7,94.8 L 250.5,91.7 L 243.9,92.5 L 238.0,100.7 L 230.3,102.5 L 235.3,90.9 L 227.6,96.1 L 225.3,101.7 L 219.1,105.4 L 213.7,104.8 L 199.9,92.9 L 200.9,89.8 L 209.7,94.1 L 216.4,87.4 L 211.3,84.3 L 206.1,75.1 L 210.1,74.5 L 216.1,80.4 L 214.6,75.4 L 222.5,74.9 L 221.8,68.9 L 224.2,68.1 L 239.9,75.4 L 244.6,81.0 L 252.8,70.0 L 258.6,77.6 L 264.0,78.6 L 261.6,79.8 L 262.9,82.1 L 265.3,75.9 L 263.0,71.2 L 267.5,72.8 L 271.4,86.5 L 281.9,95.4 L 279.1,99.0 L 285.7,98.8 L 281.5,104.8 L 284.1,107.4 L 281.5,114.8 L 288.5,111.6 L 288.8,118.0 L 294.2,109.5 L 294.4,117.2 L 304.0,114.6 L 307.7,121.1 L 306.8,125.1 L 299.1,130.9 L 307.3,126.8 L 311.5,132.0 L 322.5,134.5 L 320.3,138.1 L 324.1,140.9 L 319.5,147.5 L 323.4,150.6 L 322.9,158.1 L 320.9,157.6 L 324.9,162.3 L 328.3,158.5 L 330.9,162.8 L 326.9,169.6 L 332.8,165.0 L 332.0,155.8 L 338.5,154.7 L 342.5,163.6 L 336.2,163.2 L 340.1,170.5 L 349.5,167.7 L 356.5,172.8 L 357.0,177.4 L 331.7,182.0 L 333.6,185.7 L 349.6,181.7 L 352.5,184.0 L 344.9,188.6 L 356.4,186.9 L 358.9,189.6 L 359.8,197.6 L 355.9,201.1 L 359.8,204.8 L 358.3,210.4 L 351.4,220.5 L 340.9,222.0 L 343.9,225.0 L 348.2,223.1 L 353.1,230.6 L 344.5,240.1 L 331.6,238.7 L 324.5,223.9 L 320.4,220.3 L 313.1,221.5 L 323.5,228.2 L 325.0,235.3 L 321.8,238.4 L 326.4,248.5 L 339.8,248.6 L 347.3,252.3 L 347.4,257.4 L 339.5,267.3 L 349.8,258.7 L 355.9,260.6 L 354.2,275.9 L 338.8,292.0 L 356.0,283.9 L 357.4,289.8 L 363.7,295.0 L 362.3,322.7 L 370.8,342.5 L 370.9,353.9 L 373.1,353.2 L 373.0,345.6 L 369.2,330.4 L 373.9,314.1 L 372.1,291.8 L 375.6,290.3 L 386.1,314.8 L 387.9,311.7 L 381.8,284.1 L 387.9,263.6 L 407.8,243.4 L 412.5,242.6 L 415.4,245.3 L 411.9,272.1 L 415.0,273.4 L 415.5,264.3 L 419.6,264.9 L 418.1,276.5 L 420.9,276.2 L 421.8,283.4 L 426.2,284.2 L 429.4,281.9 L 431.6,270.2 L 428.3,267.2 L 421.5,267.4 L 429.1,263.1 L 417.0,261.8 L 437.3,259.3 L 444.4,249.3 L 446.0,223.5 L 441.7,213.3 L 443.3,205.9 L 437.1,179.1 L 433.1,173.4 L 436.0,163.7 L 434.7,158.1 L 452.0,154.7 L 456.7,150.2 L 462.7,151.7 L 477.9,183.0 L 476.3,185.5 L 481.8,193.2 L 482.3,199.0 L 485.4,197.7 L 495.6,205.9 L 500.3,230.2 L 508.9,231.0 L 510.1,226.3 L 515.6,233.6 L 520.9,231.1 L 516.8,234.2 L 517.5,237.8 L 520.8,235.7 L 521.5,238.2 L 525.5,212.2 L 522.4,200.8 L 512.9,185.2 L 521.6,180.7 L 519.5,167.2 L 526.2,161.1 L 538.5,160.0 L 545.4,164.7 L 544.9,159.2 L 548.4,158.0 L 546.1,159.5 L 554.2,166.9 L 548.6,158.1 L 551.8,145.0 L 563.2,138.2 L 564.8,148.8 L 569.2,142.7 L 569.0,135.7 L 575.2,136.8 L 577.8,141.3 L 574.9,149.9 L 583.8,143.3 L 590.7,152.4 L 586.4,162.4 L 593.8,157.6 L 596.2,159.4 L 599.6,172.8 L 597.8,183.8 L 608.2,189.3 L 615.7,189.6 L 621.6,205.8 L 627.4,208.8 L 627.1,221.0 L 631.2,223.2 L 630.4,234.6 L 637.9,243.7 L 639.8,252.4 L 636.1,232.0 L 638.4,209.3 L 631.9,194.5 L 631.8,198.2 L 626.1,194.3 L 627.6,187.6 L 620.8,179.0 L 617.1,165.6 L 614.8,151.8 L 619.5,140.4 L 628.8,141.1 L 630.7,144.8 L 634.8,142.1 L 637.1,147.0 L 641.1,144.3 L 648.7,145.8 L 654.6,154.5 L 659.5,155.0 L 665.8,161.5 L 671.6,169.1 L 672.3,177.1 L 677.9,179.7 L 694.0,178.6 L 699.8,167.0 L 698.5,156.1 L 702.6,155.9 L 706.5,150.1 L 704.6,141.3 L 709.4,135.0 L 715.5,135.7 L 715.8,131.3 L 725.5,131.7 L 729.3,134.7 L 735.6,148.8 L 733.3,149.1 L 733.4,153.2 L 737.2,153.4 L 735.8,148.9 L 752.7,143.5 L 751.0,146.2 L 755.1,145.2 L 759.7,153.3 L 765.5,156.5 L 756.7,147.4 L 754.6,143.0 L 756.7,142.2 L 753.1,142.7 L 771.8,131.3 L 777.5,114.9 L 769.1,98.8 L 767.1,85.7 L 769.2,85.0 L 762.8,71.0 L 764.7,65.9 L 770.6,66.4 L 773.9,63.3 L 775.3,67.6 L 780.1,65.0 L 783.6,69.9 L 789.2,68.3 L 790.4,63.6 L 791.1,69.1 L 794.0,58.3 L 801.9,59.0 L 805.3,63.1 L 808.9,58.0 L 813.4,64.3 L 814.8,62.9 L 814.2,65.9 L 820.6,68.7 L 816.3,71.7 L 817.7,83.4 L 825.6,81.6 L 826.2,86.2 L 837.3,86.3 L 839.7,100.5 L 833.8,110.9 L 836.6,115.8 L 840.3,114.4 L 838.7,124.4 L 849.3,120.8 L 865.7,135.6 L 871.1,130.3 L 870.0,114.1 L 887.8,111.1 L 902.6,88.4 L 910.4,84.1 L 917.0,89.2 L 923.3,89.3 L 937.0,84.1 L 901.3,106.7 L 899.5,112.0 L 899.4,109.9 L 896.8,110.9 L 905.5,119.8 L 905.1,126.9 L 896.1,136.8 L 887.6,140.0 L 884.7,145.8 L 888.7,149.0 L 895.8,147.2 L 894.3,159.4 L 909.7,158.3 L 913.9,163.9 L 924.4,153.0 L 929.4,155.5 L 935.2,166.2 L 936.6,177.3 L 933.4,188.7 L 927.7,194.4 L 928.2,198.3 L 922.6,200.2 L 920.3,206.8 L 922.6,211.5 L 920.2,207.9 L 921.8,212.2 L 919.8,210.6 L 919.7,214.5 L 914.2,218.1 L 915.6,219.9 L 925.8,210.3 L 918.3,222.3 L 922.3,225.4 L 932.7,217.5 L 944.1,216.0 L 963.0,207.4 L 958.2,224.3 L 971.3,233.1 L 966.7,233.2 L 963.2,239.7 L 969.4,233.2 L 978.4,241.7 L 971.1,233.8 L 995.7,245.3 L 1004.3,241.3 L 1008.9,246.1 L 1005.5,249.9 L 1011.6,250.9 L 1014.1,260.7 L 1018.9,253.6 L 1022.4,253.1 L 1024.1,258.6 L 1026.4,257.0 L 1030.8,261.1 L 1030.5,271.1 L 1027.2,273.5 L 1029.8,278.6 L 1026.8,283.5 L 1029.1,287.9 L 1023.3,294.5 L 1013.4,293.9 L 1012.7,296.0 L 1024.1,301.3 L 1020.2,305.6 L 1011.2,306.3 L 999.8,316.6 L 1012.5,309.4 L 1021.3,310.5 L 1026.1,307.1 L 1038.2,312.7 L 1031.0,324.8 L 1000.3,332.1 L 1035.0,329.4 L 1032.8,338.6 L 1025.9,341.1 L 1033.9,342.2 L 1029.7,347.3 L 1036.2,345.6 L 1035.2,351.9 L 1045.1,333.1 L 1044.3,348.9 L 1048.8,352.6 L 1045.0,359.6 L 1039.4,362.6 L 1040.9,369.6 L 1035.4,373.3 L 1024.4,374.1 L 1017.1,364.4 L 1001.4,356.3 L 1005.4,363.4 L 991.5,368.0 L 983.4,367.0 L 983.4,369.9 L 989.0,370.9 L 1012.3,370.1 L 1025.4,383.1 L 1034.4,382.5 L 1034.8,388.6 L 1025.3,390.7 L 1002.4,386.5 L 1004.4,390.4 L 1019.7,392.6 L 1029.4,399.7 L 1023.3,408.6 L 1011.3,406.1 L 1023.1,411.8 L 1022.7,414.0 L 1008.9,415.8 L 1005.0,421.6 L 1005.1,417.6 L 1002.1,416.7 L 1001.9,420.0 L 1011.0,429.0 L 1002.4,436.7 L 989.3,440.4 L 980.5,437.7 L 968.1,420.6 L 962.8,420.3 L 967.6,423.1 L 966.4,427.6 L 973.3,431.9 L 979.9,444.1 L 985.5,447.1 L 987.2,445.4 L 984.9,450.5 L 988.6,450.3 L 983.8,452.0 L 974.9,447.8 L 966.8,448.7 L 966.8,451.4 L 974.4,455.2 L 974.9,459.8 L 968.0,463.6 L 961.2,462.5 L 958.7,466.5 L 959.7,473.9 L 969.9,472.1 L 968.8,477.7 L 974.5,466.0 L 980.9,460.6 L 969.9,476.1 L 969.1,495.1 L 965.6,503.1 L 945.6,510.5 L 964.5,501.5 L 957.1,498.0 L 949.8,499.0 L 949.6,505.0 L 934.4,519.7 L 932.7,526.1 L 933.6,517.0 L 927.6,527.5 L 933.4,526.4 L 934.7,530.3 L 928.7,536.1 L 929.4,539.7 L 925.7,540.4 L 928.6,535.2 L 922.8,538.7 L 924.6,536.2 L 921.6,532.2 L 915.3,529.6 L 912.5,534.2 L 907.4,533.0 L 909.7,536.1 L 905.8,539.1 L 906.8,529.1 L 902.9,532.7 L 898.8,523.2 L 899.8,531.6 L 891.3,526.5 L 887.5,538.0 L 889.5,536.8 L 893.3,541.6 L 905.1,540.5 L 908.8,543.3 L 883.2,543.6 L 865.1,550.1 L 859.9,557.4 L 836.8,566.7 L 788.5,623.1 L 794.4,614.6 L 781.0,627.2 L 769.1,630.1 L 770.3,632.7 L 764.4,629.5 L 768.9,633.7 L 764.2,633.9 L 764.8,643.3 L 754.6,624.6 L 754.3,631.2 L 755.2,629.0 L 758.1,637.3 L 754.7,632.0 L 752.6,644.8 L 750.6,639.6 L 751.8,645.4 L 746.0,645.8 L 746.4,636.0 L 744.5,641.7 L 743.3,639.4 L 744.3,643.5 Z" fill="#D9E6D8" stroke="#46645D" stroke-linejoin="round" stroke-width="3.2"></path>
+<text class="island-label" x="560.0" y="437.0">ICELAND</text>
+<text class="sea-label" x="80" y="744">GREENLAND SEA</text>
+<text class="sea-label" x="755" y="744">NORTH ATLANTIC OCEAN</text>
+<g transform="translate(1042 88)"><path d="M0 40 L0 0 M0 0 L-10 15 M0 0 L10 15" fill="none" stroke="#46645D" stroke-linecap="round" stroke-width="3"></path><text class="north-label" text-anchor="middle" x="0" y="-12">N</text></g>
+<path d="M288.4,571.0 L323.4,598.0" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="283.4" y="566.0"></rect>
+<path d="M225.3,599.8 L176.5,541.3" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="225.3" cy="599.8" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="176.5" cy="541.3" r="19"></circle><text style="font-size:17px" x="176.5" y="542.3">1</text></g><path d="M295.0,568.8 L256.2,539.1" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="295.0" cy="568.8" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="256.2" cy="539.1" r="19"></circle><text style="font-size:17px" x="256.2" y="540.1">2</text></g><path d="M364.3,542.3 L365.7,500.5" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="364.3" cy="542.3" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M368.3,536.4 L365.7,500.5" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="368.3" cy="536.4" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="50.0" x="340.7" y="482.5"></rect><text style="font-size:15px" x="365.7" y="501.5">3/4</text></g><path d="M419.9,540.8 L447.2,568.9" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="419.9" cy="540.8" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="447.2" cy="568.9" r="19"></circle><text style="font-size:17px" x="447.2" y="569.9">5</text></g><path d="M440.2,529.5 L437.3,464.2" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="440.2" cy="529.5" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="437.3" cy="464.2" r="19"></circle><text style="font-size:17px" x="437.3" y="465.2">6</text></g><path d="M456.9,527.4 L515.9,508.3" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="456.9" cy="527.4" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="515.9" cy="508.3" r="19"></circle><text style="font-size:17px" x="515.9" y="509.3">7</text></g><path d="M464.6,682.7 L433.6,645.5" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="464.6" cy="682.7" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="433.6" cy="645.5" r="19"></circle><text style="font-size:17px" x="433.6" y="646.5">8</text></g><path d="M508.1,701.4 L500.0,660.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="508.1" cy="701.4" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M510.9,702.2 L500.0,660.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="510.9" cy="702.2" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="58.0" x="471.0" y="642.0"></rect><text style="font-size:15px" x="500.0" y="661.0">9/23</text></g><path d="M542.8,730.1 L524.9,764.6" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="542.8" cy="730.1" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="524.9" cy="764.6" r="19"></circle><text style="font-size:17px" x="524.9" y="765.6">10</text></g><path d="M550.3,729.6 L492.6,749.1" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="550.3" cy="729.6" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="492.6" cy="749.1" r="19"></circle><text style="font-size:17px" x="492.6" y="750.1">11</text></g><path d="M554.0,726.6 L616.3,676.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="554.0" cy="726.6" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="616.3" cy="676.0" r="19"></circle><text style="font-size:17px" x="616.3" y="677.0">12</text></g><path d="M633.2,650.4 L566.0,635.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="633.2" cy="650.4" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M641.8,649.5 L566.0,635.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="641.8" cy="649.5" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M645.0,645.3 L566.0,635.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="645.0" cy="645.3" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="98.0" x="517.0" y="617.0"></rect><text style="font-size:13px" x="566.0" y="636.0">13/19/20</text></g><path d="M661.5,632.7 L746.0,667.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="661.5" cy="632.7" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M662.3,633.7 L746.0,667.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="662.3" cy="633.7" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="68.0" x="712.0" y="649.0"></rect><text style="font-size:15px" x="746.0" y="668.0">14/15</text></g><path d="M746.0,598.0 L756.0,550.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="746.0" cy="598.0" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="756.0" cy="550.0" r="19"></circle><text style="font-size:17px" x="756.0" y="551.0">16</text></g><path d="M818.8,591.8 L869.0,594.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="818.8" cy="591.8" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M819.0,592.8 L869.0,594.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="819.0" cy="592.8" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="68.0" x="835.0" y="576.0"></rect><text style="font-size:15px" x="869.0" y="595.0">17/18</text></g><path d="M603.4,632.9 L565.0,602.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="603.4" cy="632.9" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="565.0" cy="602.0" r="19"></circle><text style="font-size:17px" x="565.0" y="603.0">21</text></g><path d="M605.1,688.4 L560.0,742.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="605.1" cy="688.4" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="560.0" cy="742.0" r="19"></circle><text style="font-size:17px" x="560.0" y="743.0">22</text></g><path d="M186.6,421.0 L115.0,402.0" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="186.6" cy="421.0" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="115.0" cy="402.0" r="19"></circle><text style="font-size:17px" x="115.0" y="403.0">24</text></g><path d="M136.9,428.0 L105.7,452.3" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="136.9" cy="428.0" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><circle cx="105.7" cy="452.3" r="19"></circle><text style="font-size:17px" x="105.7" y="453.3">25</text></g><path d="M166.6,390.7 L206.2,361.7" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="166.6" cy="390.7" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><path d="M166.5,390.5 L206.2,361.7" fill="none" opacity=".78" stroke="#1E6258" stroke-width="1.5"></path><circle cx="166.5" cy="390.5" fill="#1E6258" r="4.6" stroke="#FFFFFF" stroke-width="1.8"></circle><g class="point-badge active"><rect height="36" rx="17" width="68.0" x="172.2" y="343.7"></rect><text style="font-size:15px" x="206.2" y="362.7">26/27</text></g><g class="home-badge"><rect height="34" rx="9" width="70" x="288.4" y="581.0"></rect><text x="323.4" y="599.0">H1</text></g>
+<path d="M425.9,637.3 L415,620" opacity=".8" stroke="#173B4A" stroke-width="1.6"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="410" y="615"></rect>
+<path d="M415,620 L370,662" fill="none" opacity=".8" stroke="#173B4A" stroke-width="1.6"></path><g class="home-badge"><rect height="34" rx="9" width="70" x="335" y="667"></rect><text x="370" y="684">H2</text></g>
+<path d="M556.9,725.8 L671.9,735.8" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="551.9" y="720.8"></rect>
+<g class="home-badge"><rect height="34" rx="9" width="70" x="636.9" y="718.8"></rect><text x="671.9" y="736.8">H3</text></g>
+<path d="M816.6,582.1 L871.6,527.1" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="811.6" y="577.1"></rect>
+<g class="home-badge"><rect height="34" rx="9" width="88" x="827.6" y="510.1"></rect><text x="871.6" y="528.1">H4/H5</text></g>
+<path d="M645.9,646.6 L685.9,624.6" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="640.9" y="641.6"></rect>
+<g class="home-badge"><rect height="34" rx="9" width="70" x="650.9" y="607.6"></rect><text x="685.9" y="625.6">H6</text></g>
+<path d="M290.6,481.9 L302.6,421.9" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="285.6" y="476.9"></rect>
+<g class="home-badge"><rect height="34" rx="9" width="70" x="267.6" y="404.9"></rect><text x="302.6" y="422.9">H7</text></g>
+<path d="M225.8,595.5 L257.8,625.5" opacity=".8" stroke="#173B4A" stroke-width="2"></path>
+<rect fill="#173B4A" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" width="10" x="220.8" y="590.5"></rect>
+<g class="home-badge"><rect height="34" rx="9" width="70" x="222.8" y="608.5"></rect><text x="257.8" y="626.5">H8</text></g>
+</svg></div></div>
+<div class="map-legend">
+<span><i class="legend-dot main"></i> 本次主線景點</span>
+<span><i class="legend-home">H</i> 固定住宿區域</span>
+</div>
+<p class="map-note">地圖上的 H1–H8 依住宿城鎮／區域概略定位，並非實際房源地址；斜線合併的編號代表景點位置接近，例如 13/19/20。景點名稱與 WGS84 座標請查下方表格。地圖可左右滑動，實際導航仍請使用道路與停車場位置。</p>
+</section>
+<section class="day-panel" id="day-1"><div class="day-panel-head"><span class="day-kicker">DAY 01</span><h2>2027/3/7（日）｜抵達冰島、取車與採買</h2></div>
+<p><strong>起點：</strong> 凱夫拉維克國際機場（Keflavík International Airport）①，15:30 抵達<br/>
+<strong>住宿：</strong> H1 雷克雅維克（Reykjavík）<br/>
+<strong>預估純車程：</strong> 約 1 小時</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>凱夫拉維克國際機場（Keflavík International Airport）①</strong> — 15:30 抵達、領行李及入境；<strong>18:00 依預約時間向 Zero Car Rental 取車</strong>。取車採 Keybox 自助方式，請事先完成線上 Check-in，並留意業者約於取車前 30–60 分鐘寄送密碼。機場至辦公室步行約 3–4 分鐘。</li>
+<li><strong>雷克雅維克採買點（Reykjavík Grocery Stop）②</strong> — 從機場開車約 <strong>45–55 分鐘</strong>。採買早餐、簡易晚餐、飲用水及隔日道路補給，預留約 45–60 分鐘。</li>
+<li><strong>H1 雷克雅維克（Reykjavík）住宿</strong> — 從採買點開車約 <strong>15–25 分鐘</strong>。依取車及採買實際時間辦理入住，抵達時間可能落在 19:00–20:00。</li>
+</ol>
+<p><strong>H1 住宿：</strong> 雷克雅維克（Reykjavík）東南側自炊住宿，3 人入住，需有廚房、停車位及自助入住。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p><strong>取車提醒：</strong>18:00 取車後才開始前往超市；若入境或行李延誤，優先買隔日早餐、飲水及簡易補給，避免因採買延誤 H1 入住。<strong>優先推薦：Bónus（小豬超市）</strong>。取車後若想先採買，可考慮 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Fitjar+Reykjanesb%C3%A6r" rel="noopener noreferrer" target="_blank">Bónus Fitjar（Reykjanesbær，Fitjar，260）</a>；若想抵達 Reykjavík 後再買，H1 東南側較方便的選擇是 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Skeifan+11a+Reykjavik" rel="noopener noreferrer" target="_blank">Bónus Skeifan 11a（108 Reykjavík）</a>。兩家擇一即可。Bónus 官方以低價作為主要訴求；目前官方列示 Fitjar 與 Skeifan 店營業時間均為每日 09:00–21:00，2027 年出發前仍須再查一次。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-2"><div class="day-panel-head"><span class="day-kicker">DAY 02</span><h2>2027/3/8（一）｜Silfra 首次嘗試＋黃金圈 → 赫拉（Hella）</h2></div>
+<p><strong>起點：</strong> H1 雷克雅維克（Reykjavík）<br/>
+<strong>活動：</strong> DIVE.IS｜Silfra Snorkeling Tour，預約 09:00<br/>
+<strong>住宿：</strong> H2 赫拉（Hella）<br/>
+<strong>預估純車程：</strong> 約 3.5–4.5 小時，另加活動及景點停留時間</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>H1 雷克雅維克（Reykjavík）出發</strong> — 建議約 <strong>07:15 出發</strong>，前往絲浮拉裂縫（Silfra Fissure）③，車程約 <strong>55–70 分鐘</strong>；DIVE.IS 要求自駕旅客至少提前 15 分鐘抵達集合點報到，07:15 出發可保留交通緩衝。</li>
+<li><strong>絲浮拉裂縫（Silfra Fissure）③</strong> — DIVE.IS 浮潛活動，預約時間 09:00。官方目前標示現場活動約 2.5 小時；實際仍依當日場次及業者通知為準。</li>
+<li><strong>辛格韋德利國家公園（Þingvellir National Park）④</strong> — 從 Silfra 集合區前往主要步道約 <strong>5–10 分鐘</strong>。安排公園主要步道及景觀，約 45–60 分鐘。</li>
+<li><strong>布魯瀑布（Brúarfoss）⑤</strong> — 從 Þingvellir 一帶開車約 <strong>30–40 分鐘</strong>。使用 Hlauptunga 的近端付費停車場，步行至瀑布約 5 分鐘，預留約 30–45 分鐘。出發前及抵達時確認通往停車場的道路與停車場是否開放；不要改走傳統 7 公里往返步道，該步道官方資訊標示冬季關閉。</li>
+<li><strong>蓋歇爾地熱區（Geysir Geothermal Area）⑥</strong> — 從 Brúarfoss 開車約 <strong>15–20 分鐘</strong>。觀賞間歇泉及地熱景觀，約 45–60 分鐘。</li>
+<li><strong>黃金瀑布（Gullfoss）⑦</strong> — 從 Geysir 開車約 <strong>10–15 分鐘</strong>。安排主要觀景平台，約 45–60 分鐘。</li>
+<li><strong>H2 赫拉（Hella）住宿</strong> — 從 Gullfoss 開車約 <strong>1 小時 30 分鐘–1 小時 50 分鐘</strong>。目標約 18:30 抵達。</li>
+</ol>
+<p><strong>H2 住宿：</strong> 赫拉（Hella）或鎮外鄉村自炊住宿，3 人入住，優先選擇有廚房、停車位及較低光害的地點。</p>
+<p><strong>Silfra 候補安排：</strong> 若 3/8 活動取消，3/14（Day 8）為唯一候補日，需依 DIVE.IS 確認的場次重新安排當日路線。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>若 GPS 路線及時間允許，優先考慮 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Larsenstr%C3%A6ti+Selfoss" rel="noopener noreferrer" target="_blank">Bónus Selfoss（Larsenstræti，Selfoss）</a>，目前官方列示每日 09:00–21:00。若當天路線不經 Selfoss，Hella 鎮內有 <a href="https://kjorbudin.is/hella/" rel="noopener noreferrer" target="_blank">Kjörbúðin（Suðurlandsvegur 1）</a> 可做基本補貨，目前週一至週五營業至 20:00。建議主要食材仍在 Day 1 Reykjavík 先買齊。</p></aside><hr/>
+<p class="editor-note">報到時間提醒：DIVE.IS 現行頁面要求自駕旅客於活動開始前 15 分鐘抵達；09:00 場次請預留交通緩衝。 <a href="https://www.dive.is/diving-snorkeling-tours/snorkeling-day-tours/silfra-snorkeling-day-tour">查看 DIVE.IS 官方活動時間</a></p></section>
+<section class="day-panel" id="day-3"><div class="day-panel-head"><span class="day-kicker">DAY 03</span><h2>2027/3/9（二）｜南岸瀑布、海岬與黑沙灘 → 維克（Vík）</h2></div>
+<p><strong>出發基準：</strong> 08:30，H2 赫拉（Hella）<br/>
+<strong>住宿：</strong> H3 維克（Vík）<br/>
+<strong>預估純車程：</strong> 約 2.5–3.5 小時</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>塞里雅蘭瀑布（Seljalandsfoss）⑧</strong> — 從 H2 開車約 <strong>25–30 分鐘</strong>。可由正面欣賞瀑布；後方步道若結冰、封閉或不安全，不要勉強通行。</li>
+<li><strong>斯科加瀑布（Skógafoss）⑨</strong> — 從 Seljalandsfoss 開車約 <strong>25–30 分鐘</strong>。可在瀑布下方觀景；是否登上階梯依體力及結冰情況決定。</li>
+<li><strong>迪霍拉里海岬與燈塔（Dyrhólaey）⑩</strong> — 從 Skógafoss 開車約 <strong>25–35 分鐘</strong>。視風勢、道路與停車情況安排短停；若強風、路面結冰或道路管制，直接前往下一站。</li>
+<li><strong>雷尼斯黑沙灘（Reynisfjara）⑪</strong> — 從 Dyrhólaey 開車約 <strong>15–20 分鐘</strong>。觀賞黑沙灘與玄武岩柱。必須遠離浪線、絕不背對海浪，並遵守現場警示燈及封鎖線。</li>
+<li><strong>維克紅頂教堂（Vík Church）⑫</strong> — 從 Reynisfjara 開車約 <strong>10–15 分鐘</strong>。視時間、天候及停車情況短停，欣賞 Vík 小鎮與海岸景觀。</li>
+<li><strong>H3 維克（Vík）住宿</strong> — 從教堂前往住宿依實際地址約 <strong>5–15 分鐘</strong>。目標約 18:30 抵達。</li>
+</ol>
+<p><strong>H3 住宿：</strong> 維克（Vík）自炊公寓，3 人入住，需有廚房及停車位。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>維克（Vík）有 <a href="https://www.google.com/maps/search/?api=1&amp;query=Kr%C3%B3nan+Austurvegur+20+Vik+Iceland" rel="noopener noreferrer" target="_blank">Krónan Vík（Austurvegur 20）</a>，目前官方列示每日 09:00–21:00。此路段沒有 Bónus；Krónan 是本日抵達 H3 前最順路的平價連鎖補給點，可買隔天前往東南冰河湖區所需的食材與飲水。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-4"><div class="day-panel-head"><span class="day-kicker">DAY 04</span><h2>2027/3/10（三）｜維克（Vík）→ 羽毛峽谷 → 斯卡夫塔山 → 傑古沙龍冰河湖／Hali</h2></div>
+<p><strong>出發基準：</strong> 08:30，H3 維克（Vík）<br/>
+<strong>住宿：</strong> H4 Hali／Gerði<br/>
+<strong>預估純車程：</strong>約 4–5 小時</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>羽毛峽谷（Fjaðrárgljúfur）⑬</strong> — 從 H3 維克（Vík）開車約 <strong>1 小時–1 小時 15 分鐘</strong>。安排主要觀景步道短停，約 30–45 分鐘；若步道結冰、強風、封閉或現場警示不允許進入，依現場規定取消步行。</li>
+<li><strong>教堂鎮（Kirkjubæjarklaustur）午餐／補給</strong> — 從羽毛峽谷開車約 <strong>15–20 分鐘</strong>。安排午餐、補充飲用水及隔日冰川活動所需食物；若 Gvendarkjör 營業，可補買基本用品。</li>
+<li><strong>西杜瀑布（Foss á Síðu）⑭</strong> — 從教堂鎮往東沿 1 號公路開車約 <strong>10–15 分鐘</strong>。瀑布可由道路附近觀景位置欣賞，預留約 10–15 分鐘；勿進入私人農場或未開放區域，也不必為了上行步道增加時間。</li>
+<li><strong>矮人岩（Dverghamrar）⑮</strong> — 從 Foss á Síðu 開車約 <strong>2–5 分鐘</strong>。這是受保護的玄武岩柱地形，沿標示步道短走約 15–25 分鐘；請勿離開步道或踩踏周邊植被。</li>
+<li><strong>斯卡夫塔山（Skaftafell）⑯</strong> — 從 Dverghamrar 開車約 <strong>1 小時–1 小時 15 分鐘</strong>。安排短停及周邊景觀，約 30–45 分鐘；若前段行程延誤，縮短停留時間。</li>
+<li><strong>傑古沙龍冰河湖／Melrakki 集合區（Jökulsárlón）⑰</strong> — 從 Skaftafell 開車約 <strong>50–60 分鐘</strong>。先確認 Melrakki 正式集合地點及報到方式，再安排冰河湖短停。</li>
+<li><strong>H4 Hali／Gerði 住宿</strong> — 從 Jökulsárlón 開車約 <strong>10–30 分鐘</strong>，依實際住宿地址為準。目標約 18:30 抵達。</li>
+</ol>
+<p><strong>H4 住宿：</strong> Hali／Gerði 周邊住宿，3 人入住，優先選擇靠近集合區、有停車位及可自炊的住宿。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>建議在 Day 3 傍晚抵達 Vík 後，到 <a href="https://www.google.com/maps/search/?api=1&amp;query=Kr%C3%B3nan+Austurvegur+20+Vik+Iceland" rel="noopener noreferrer" target="_blank">Krónan Vík（Austurvegur 20）</a> 補齊兩天份物資。Day 4 的出發基準為 08:30，而 Krónan 目前公告 09:00 才營業，因此不建議把 Day 4 早上採買當作確定安排。途中教堂鎮（Kirkjubæjarklaustur）有 <a href="https://www.google.com/maps/search/?api=1&amp;query=Gvendarkj%C3%B6r+Klaustursvegur+13" rel="noopener noreferrer" target="_blank">Gvendarkjör（Klaustursvegur 13）</a> 小型雜貨店，可在午餐停留時補買基本用品；品項可能較少，營業時間資料有差異，請出發前確認，不建議把大量採購留到此處。</p><p class="route-extra-note">新增景點安排：Foss á Síðu 與 Dverghamrar 位於教堂鎮以東、前往 Skaftafell 的 1 號公路沿線，安排午餐後順路短停，不需折返教堂鎮。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-5"><div class="day-panel-head"><span class="day-kicker">DAY 05</span><h2>2027/3/11（四）｜Melrakki 冰洞與冰川活動首次嘗試</h2></div>
+<p><strong>起點：</strong> H4 Hali／Gerði<br/>
+<strong>活動：</strong> Melrakki Adventures｜Jökulsárlón Ice Cave &amp; Glacier Hike<br/>
+<strong>住宿：</strong> H5 Hali／Gerði（與 H4 同一住宿）</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>H4 Hali／Gerði 出發</strong> — 依 Melrakki 確認的集合時間出發，提前 20–30 分鐘抵達傑古沙龍冰河湖／Melrakki 集合區（Jökulsárlón）⑰；實際車程依住宿地址約 <strong>10–30 分鐘</strong>。</li>
+<li><strong>Melrakki Adventures｜Jökulsárlón Ice Cave &amp; Glacier Hike</strong> — 依預約場次參加冰洞及冰川活動。Melrakki 目前公開資訊將冬季冰洞與冰川健行組合列為約 5–7 小時；2027 年實際活動內容、時數及集合時間以訂單與業者通知為準。</li>
+<li><strong>返回 H5 Hali／Gerði 住宿</strong> — 活動結束後直接返回住宿，不再安排其他遠程景點。</li>
+</ol>
+<p><strong>H5 住宿：</strong> 與 H4 相同，第二晚固定住宿。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>Hali／Gerði 與 Jökulsárlón 集合區周邊不是 Bónus 或 Krónan 的主要設店區域，本日不安排超市停留。請在 Day 4 的 Vík 或 Kirkjubæjarklaustur 先準備活動日的早餐、飲水、簡易午餐與零食。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-6"><div class="day-panel-head"><span class="day-kicker">DAY 06</span><h2>2027/3/12（五）｜Melrakki 唯一候補日／冰河湖 → 教堂鎮（Kirkjubæjarklaustur）</h2></div>
+<p><strong>住宿：</strong> H6 教堂鎮（Kirkjubæjarklaustur）<br/>
+<strong>預估純車程：</strong> 若參加候補活動，活動結束後至 H6 約 1 小時 30 分鐘；若前一日活動完成，觀光路線總車程約 1 小時 30 分鐘</p>
+<h3>方案 A｜3/11 Melrakki 活動取消，改參加 3/12 唯一候補</h3>
+<ol>
+<li><strong>H5 Hali／Gerði 出發</strong> — 依 Melrakki 確認的 3/12 候補場次前往集合區，車程約 <strong>10–30 分鐘</strong>，並提前 20–30 分鐘報到。</li>
+<li><strong>Melrakki Adventures｜Jökulsárlón Ice Cave &amp; Glacier Hike</strong> — 依業者確認的候補場次參加活動；目前公開資訊約 5–7 小時，實際時數以 2027 訂單及業者通知為準。</li>
+<li><strong>教堂鎮（Kirkjubæjarklaustur）H6 住宿</strong> — 從 Jökulsárlón 集合區開車約 <strong>1 小時 30 分鐘</strong>。活動結束後直接前往住宿，不再安排其他景點。</li>
+</ol>
+<h3>方案 B｜3/11 已完成 Melrakki 活動</h3>
+<ol>
+<li><strong>H5 Hali／Gerði 出發</strong> — 前往傑古沙龍冰河湖（Jökulsárlón）⑰，車程約 <strong>10–30 分鐘</strong>。</li>
+<li><strong>傑古沙龍冰河湖（Jökulsárlón）⑰</strong> — 安排冰河湖觀景，約 1–1.5 小時。</li>
+<li><strong>鑽石沙灘（Diamond Beach）⑱</strong> — 從冰河湖停車區步行或短程移動即可抵達，視當日停車與海岸狀況安排約 40–50 分鐘。</li>
+<li><strong>教堂鎮（Kirkjubæjarklaustur）H6 住宿</strong> — 從鑽石沙灘一帶開車約 <strong>1 小時 30 分鐘</strong>。抵達後入住及休息。</li>
+</ol>
+<p><strong>H6 住宿：</strong> 教堂鎮（Kirkjubæjarklaustur）自炊住宿，3 人入住，需有廚房及停車位。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>若採方案 B（3/11 已完成活動），抵達教堂鎮後可查看 <a href="https://www.google.com/maps/search/?api=1&amp;query=Gvendarkj%C3%B6r+Klaustursvegur+13" rel="noopener noreferrer" target="_blank">Gvendarkjör（Klaustursvegur 13）</a> 是否仍營業，補買隔日長途車程所需物資。若採方案 A、3/12 才完成約 5–7 小時活動，抵達時間可能較晚，不要依賴商店仍營業；建議前一晚先備妥食物。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-7"><div class="day-panel-head"><span class="day-kicker">DAY 07</span><h2>2027/3/13（六）｜教堂鎮（Kirkjubæjarklaustur）→ 博爾加內斯（Borgarnes）</h2></div>
+<p><strong>出發基準：</strong> 08:30，H6 教堂鎮（Kirkjubæjarklaustur）<br/>
+<strong>住宿：</strong> H7 博爾加內斯（Borgarnes）<br/>
+<strong>預估純車程：</strong>約 5–6 小時；含景點、午餐及步行約 8–9.5 小時</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>H6 教堂鎮（Kirkjubæjarklaustur）出發</strong> — 08:30 出發基準；先在鎮內安排兩個短停。由於住宿尚未選定，當天前往停車點的短程車程依 H6 實際地址微調。</li>
+<li><strong>姐妹瀑布（Systrafoss）⑲</strong> — 從 H6 住宿區開車約 <strong>5–10 分鐘</strong>（依實際地址）。建議只看瀑布下方觀景區，短走約 15–20 分鐘；不安排上行 Systravatn 的陡坡步道。</li>
+<li><strong>教堂地板（Kirkjugólf）⑳</strong> — 從 Systrafoss 一帶短程移動約 <strong>5–10 分鐘</strong>。天然玄武岩表面像六角形石磚，短停約 15–20 分鐘；不走包含兩處景點的完整 5 公里 Ástarbrautin 環狀步道。</li>
+<li><strong>Eldhraun 熔岩原（Eldhraun）㉑</strong> — 從 Kirkjugólf 開車約 <strong>20–30 分鐘</strong>。在合法停車點短停約 10–20 分鐘；只走允許的步道，不可駛離道路或踩踏苔原。</li>
+<li><strong>石堆山（Laufskálavarða）㉒</strong> — 從 Eldhraun 開車約 <strong>20–30 分鐘</strong>。路旁觀景平台及石堆短停約 10–15 分鐘；此處受保護，請勿自行堆疊或移動石堆。</li>
+<li><strong>維克（Vík）午餐、休息與補給</strong> — 從 Laufskálavarða 開車約 <strong>30–40 分鐘</strong>。預留 45–60 分鐘；可在 Krónan Vík 採買飲水、零食及 Day 8 早餐用品。</li>
+<li><strong>克維爾努瀑布（Kvernufoss）㉓</strong> — 從 Vík 開車約 <strong>40–50 分鐘</strong>，前往 Skógar 博物館停車場，再沿標示步道進入峽谷。來回步行及觀景預留約 60–75 分鐘；若路面結冰、步道封閉或風勢不佳，取消此站，不要走到瀑布後方或越過封鎖線。</li>
+<li><strong>H7 博爾加內斯（Borgarnes）住宿</strong> — 從 Kvernufoss 沿 1 號公路開車約 <strong>3 小時 10 分鐘–3 小時 30 分鐘</strong>。途中若需要加油、上洗手間或休息，可在霍爾斯沃德呂爾（Hvolsvöllur）短停約 10–15 分鐘。目標約 18:30 抵達；若當天延誤，優先縮短 Kvernufoss 停留或直接略過，不以夜間趕路補回時間。</li></ol>
+<p><strong>H7 住宿：</strong> 博爾加內斯（Borgarnes）自炊住宿，3 人入住，需有廚房及停車位，方便隔日前往斯奈山半島。</p>
+<aside class="shopping-note"><strong>補給與採買</strong><p>本日午餐與主要補給安排在維克（Vík）：可至 <a href="https://www.google.com/maps/search/?api=1&amp;query=Kr%C3%B3nan+Austurvegur+20+Vik+Iceland" rel="noopener noreferrer" target="_blank">Krónan Vík（Austurvegur 20）</a> 採買飲水、零食及 Day 8 早餐用品。抵達 H7 博爾加內斯後，若尚未太晚且仍有需要，可到 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Digranesgata+Borgarnes" rel="noopener noreferrer" target="_blank">Bónus Borgarnes（Digranesgata）</a> 補貨；營業時間請出發前再確認。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-8"><div class="day-panel-head"><span class="day-kicker">DAY 08</span><h2>2027/3/14（日）｜斯奈山半島 → 凱夫拉維克（Keflavík）</h2></div>
+<p><strong>住宿：</strong> H8 Aurora Hotel at Reykjavik-Keflavik Airport<br/>
+<strong>主行程出發基準：</strong> 06:30，H7 博爾加內斯（Borgarnes）<br/>
+<strong>主行程預估純車程：</strong> 約 5.5–6 小時；含景點及用餐停留，約 9–10 小時</p>
+<h3>方案 A｜3/8 Silfra 已完成，執行斯奈山半島行程</h3>
+<ol>
+<li><strong>H7 博爾加內斯（Borgarnes）出發</strong> — 建議 06:30 出發，前往斯奈山半島南岸；當日須在 18:00 前完成租車歸還。</li>
+<li><strong>Ytri-Tunga 海豹沙灘（Ytri-Tunga Seal Beach）㉔</strong> — 從 H7 開車約 <strong>1 小時–1 小時 15 分鐘</strong>。視海況、天候與時間安排 30–45 分鐘；海豹不保證出現，請保持距離，不追逐或接近野生動物。</li>
+<li><strong>阿爾納斯塔皮海岸（Arnarstapi Coast）㉕</strong> — 從 Ytri-Tunga 開車約 <strong>40–55 分鐘</strong>。安排海岸步道主要景觀，約 45–60 分鐘；依風勢及步道結冰情況決定是否步行。</li>
+<li><strong>教會山（Kirkjufell）㉖與教會山瀑布（Kirkjufellsfoss）㉗</strong> — 從 Arnarstapi 經 54 號公路及 Fróðárheiði 一帶開車約 <strong>50–70 分鐘</strong>。安排主要觀景區，約 45–60 分鐘。出發前務必確認 Fróðárheiði 路段是否開放及路面狀況；若封閉或天候不佳，不要勉強穿越，取消此站並前往 Borgarnes。</li>
+<li><strong>博爾加內斯（Borgarnes）</strong> — 從 Kirkjufell 一帶開車約 <strong>1 小時–1 小時 15 分鐘</strong>。安排簡單午餐及短暫休息；不要在此久留，並保留足夠時間前往 Keflavík。</li>
+<li><strong>Zero Car Rental 還車（Blikavöllur 3）</strong> — 從 Borgarnes 開車約 <strong>1 小時 15 分鐘–1 小時 30 分鐘</strong>。租車合約於 <strong>18:00 結束</strong>，請以 <strong>17:30 前抵達還車區</strong>為目標，預留加油與找入口的時間。汽油車採滿油取車、滿油還車；請在 Keflavík 附近完成最後加油，再依 Keybox 指示交還鑰匙。</li>
+<li><strong>H8 Aurora Hotel at Reykjavik-Keflavik Airport</strong> — 還車後步行前往飯店辦理入住；飯店位於機場航廈旁，無須再開車或搭接駁車。</li>
+</ol>
+<p><strong>行程順序與還車截止：</strong> 當日租車必須於 18:00 前歸還，規劃上以 17:30 前抵達 Zero Car Rental（Blikavöllur 3）為目標。Ytri-Tunga 為第一優先刪減點；若延誤，縮短 Arnarstapi 停留，仍無法追回時間時就取消 Kirkjufell，不可為趕還車而超速。大陸橋（Bridge Between Continents）㉚不列入本日主線。加油、還車與入住應排在所有景點之後。</p>
+<h3>方案 B｜3/8 Silfra 取消，3/14 使用唯一候補場次</h3>
+<ol>
+<li><strong>H7 博爾加內斯（Borgarnes）出發</strong> — 若 DIVE.IS 確認 09:00 場次，建議約 07:15 出發，前往絲浮拉裂縫（Silfra Fissure）③，車程約 <strong>1 小時 15 分鐘–1 小時 30 分鐘</strong>；至少提前 15 分鐘抵達報到。</li>
+<li><strong>絲浮拉裂縫（Silfra Fissure）③</strong> — DIVE.IS 唯一候補場次，預約時間以業者確認為準；現場活動約 2.5 小時，實際依當日流程為準。</li>
+<li><strong>Zero Car Rental 還車（Blikavöllur 3）</strong> — 活動後直接前往，車程約 <strong>1 小時 30 分鐘–1 小時 50 分鐘</strong>；先完成最後加油，並於 <strong>18:00 前</strong>依 Keybox 流程還車。</li>
+<li><strong>H8 Aurora Hotel at Reykjavik-Keflavik Airport</strong> — 還車後步行前往飯店，入住後不再需要租車。</li>
+</ol>
+<p><strong>H8 住宿：</strong> <strong>Aurora Hotel at Reykjavik-Keflavik Airport</strong>，3/14 已確定入住，已知房價總額 <strong>36,567.16 ISK</strong>。飯店地址為 Blikavöllur 2，距機場航廈約 150 公尺；是否含早餐及房型／入住人數，仍以訂單內容為準。</p>
+<aside class="shopping-note"><strong>補給與還車提醒</strong><p><strong>兩種方案都必須於 18:00 前完成 Zero Car Rental 還車。</strong>Zero Car Rental 位於 Blikavöllur 3，還車前需將汽油車加滿（滿油取還）。<strong>方案 A：</strong>斯奈山半島行程返回 Borgarnes 後，如時間充裕，可在 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Digranesgata+Borgarnes" rel="noopener noreferrer" target="_blank">Bónus Borgarnes（Digranesgata）</a> 短暫補貨，再往 H8；但若前段延誤，請直接前往機場區，不要為採買壓縮駕駛緩衝。<strong>方案 B：</strong>若改去 Silfra，離開 Borgarnes 後不再經過此店，請於 Day 7 先買齊。Bónus 目前公告 Borgarnes 店每日 09:00–20:00。</p></aside><hr/>
+</section>
+<section class="day-panel" id="day-9"><div class="day-panel-head"><span class="day-kicker">DAY 09</span><h2>2027/3/15（一）｜離境</h2></div>
+<p><strong>航班：</strong> 07:35，自凱夫拉維克國際機場（Keflavík International Airport）① 起飛</p>
+<h3>今日路線順序</h3>
+<ol>
+<li><strong>H8 Aurora Hotel 退房</strong> — 建議約 04:45 離開飯店。</li>
+<li><strong>步行前往凱夫拉維克國際機場（Keflavík International Airport）①</strong> — Aurora Hotel 距航廈約 150 公尺，步行約 2–3 分鐘；3/14 已完成租車歸還，3/15 不需再開車、加油或還車。</li>
+<li><strong>機場報到、托運與安全檢查</strong> — 預留約 2 小時 45 分鐘。</li>
+<li><strong>07:35 航班離境。</strong></li>
+</ol>
+<aside class="shopping-note"><strong>清晨離境提醒</strong><p>預計 04:45 從 Aurora Hotel 步行前往航廈；若打算使用飯店早餐，請先確認早餐是否包含於房價，以及當日供餐時間。即使早餐尚未開始，也不影響步行前往機場。</p></aside><hr/>
+</section>
+<section class="resource-panel" id="resources-1"><h2>景點編號與座標（WGS84）</h2>
+<p>座標供導航搜尋參考；實際停車點請依景點官方指示及現場標示設定。部分原先研究過的備選點保留在表內，但不列入本版主線行程。</p>
+<div class="table-wrap"><p class="numbering-policy">編號規則：①–㉗為本次行程實際排入的景點與導航點（含活動集合點、時間允許時停留）；㉘–㉛為未排入主線的備選景點，集中列於表格最後，地圖不顯示。地圖上以斜線合併的號碼代表位置非常接近，詳細名稱與座標請參考本表。</p><table>
+<thead>
+<tr>
+<th style="text-align:right">編號</th>
+<th>地點</th>
+<th style="text-align:right">緯度</th>
+<th style="text-align:right">經度</th>
+<th>安排</th>
+</tr>
+</thead>
+<tbody><tr><td style="text-align:right">①</td><td>凱夫拉維克國際機場（Keflavík International Airport）</td><td style="text-align:right">63.9850</td><td style="text-align:right">-22.6056</td><td>D1、D9</td></tr><tr><td style="text-align:right">②</td><td>雷克雅維克採買點（Reykjavík Grocery Stop）</td><td style="text-align:right">64.1300</td><td style="text-align:right">-21.8600</td><td>D1，實際超市依 H1 位置選擇</td></tr><tr><td style="text-align:right">③</td><td>絲浮拉裂縫（Silfra Fissure）</td><td style="text-align:right">64.2550</td><td style="text-align:right">-21.1177</td><td>D2；D8 候補</td></tr><tr><td style="text-align:right">④</td><td>辛格韋德利國家公園（Þingvellir National Park）</td><td style="text-align:right">64.2822</td><td style="text-align:right">-21.0764</td><td>D2</td></tr><tr><td style="text-align:right">⑤</td><td>布魯瀑布（Brúarfoss）</td><td style="text-align:right">64.2643</td><td style="text-align:right">-20.5157</td><td>D2，使用 Hlauptunga 近端停車場</td></tr><tr><td style="text-align:right">⑥</td><td>蓋歇爾地熱區（Geysir Geothermal Area）</td><td style="text-align:right">64.3167</td><td style="text-align:right">-20.2999</td><td>D2</td></tr><tr><td style="text-align:right">⑦</td><td>黃金瀑布（Gullfoss）</td><td style="text-align:right">64.3271</td><td style="text-align:right">-20.1199</td><td>D2</td></tr><tr><td style="text-align:right">⑧</td><td>塞里雅蘭瀑布（Seljalandsfoss）</td><td style="text-align:right">63.6156</td><td style="text-align:right">-19.9886</td><td>D3</td></tr><tr><td style="text-align:right">⑨</td><td>斯科加瀑布（Skógafoss）</td><td style="text-align:right">63.5321</td><td style="text-align:right">-19.5114</td><td>D3</td></tr><tr><td style="text-align:right">⑩</td><td>迪霍拉里海岬與燈塔（Dyrhólaey）</td><td style="text-align:right">63.4020</td><td style="text-align:right">-19.1264</td><td>D3</td></tr><tr><td style="text-align:right">⑪</td><td>雷尼斯黑沙灘（Reynisfjara）</td><td style="text-align:right">63.4044</td><td style="text-align:right">-19.0453</td><td>D3</td></tr><tr><td style="text-align:right">⑫</td><td>維克紅頂教堂（Vík Church）</td><td style="text-align:right">63.4187</td><td style="text-align:right">-19.0061</td><td>D3</td></tr><tr><td style="text-align:right">⑬</td><td>羽毛峽谷（Fjaðrárgljúfur）</td><td style="text-align:right">63.7713</td><td style="text-align:right">-18.1718</td><td>D4</td></tr><tr><td style="text-align:right">⑭</td><td>西杜瀑布（Foss á Síðu）</td><td style="text-align:right">63.853902</td><td style="text-align:right">-17.871038</td><td>D4，1 號公路沿線短停</td></tr><tr><td style="text-align:right">⑮</td><td>矮人岩（Dverghamrar）</td><td style="text-align:right">63.849001</td><td style="text-align:right">-17.861471</td><td>D4，沿標示步道短走</td></tr><tr><td style="text-align:right">⑯</td><td>斯卡夫塔山（Skaftafell）</td><td style="text-align:right">64.0166</td><td style="text-align:right">-16.9660</td><td>D4</td></tr><tr><td style="text-align:right">⑰</td><td>傑古沙龍冰河湖／Melrakki 集合區（Jökulsárlón）</td><td style="text-align:right">64.0481</td><td style="text-align:right">-16.1794</td><td>D4、D5、D6</td></tr><tr><td style="text-align:right">⑱</td><td>鑽石沙灘（Diamond Beach）</td><td style="text-align:right">64.0437</td><td style="text-align:right">-16.1770</td><td>D6</td></tr><tr><td style="text-align:right">⑲</td><td>姐妹瀑布（Systrafoss）</td><td style="text-align:right">63.775867</td><td style="text-align:right">-18.078849</td><td>D7，僅瀑布下方觀景區</td></tr><tr><td style="text-align:right">⑳</td><td>教堂地板（Kirkjugólf）</td><td style="text-align:right">63.795236</td><td style="text-align:right">-18.046201</td><td>D7，短停，不走完整 5 公里環狀步道</td></tr><tr><td style="text-align:right">㉑</td><td>Eldhraun 熔岩原（Eldhraun）</td><td style="text-align:right">63.8500</td><td style="text-align:right">-18.5000</td><td>D7</td></tr><tr><td style="text-align:right">㉒</td><td>石堆山（Laufskálavarða）</td><td style="text-align:right">63.595859</td><td style="text-align:right">-18.464783</td><td>D7，路旁觀景平台短停</td></tr><tr><td style="text-align:right">㉓</td><td>克維爾努瀑布（Kvernufoss）</td><td style="text-align:right">63.528558</td><td style="text-align:right">-19.481301</td><td>D7，從 Skógar 博物館停車場步行</td></tr><tr><td style="text-align:right">㉔</td><td>Ytri-Tunga 海豹沙灘（Ytri-Tunga Seal Beach）</td><td style="text-align:right">64.8028</td><td style="text-align:right">-23.0800</td><td>D8，時間允許時停留</td></tr><tr><td style="text-align:right">㉕</td><td>阿爾納斯塔皮海岸（Arnarstapi Coast）</td><td style="text-align:right">64.7687</td><td style="text-align:right">-23.6162</td><td>D8</td></tr><tr><td style="text-align:right">㉖</td><td>教會山（Kirkjufell）</td><td style="text-align:right">64.9410</td><td style="text-align:right">-23.3057</td><td>D8，視 Fróðárheiði 路況</td></tr><tr><td style="text-align:right">㉗</td><td>教會山瀑布（Kirkjufellsfoss）</td><td style="text-align:right">64.9417</td><td style="text-align:right">-23.3069</td><td>D8，視 Fróðárheiði 路況</td></tr><tr><td style="text-align:right">㉘</td><td>Hraunfossar 熔岩瀑布（Hraunfossar）</td><td style="text-align:right">64.7023</td><td style="text-align:right">-20.9785</td><td>未排入主線，位置偏離本次 D7 路線</td></tr><tr><td style="text-align:right">㉙</td><td>Barnafoss 兒童瀑布（Barnafoss）</td><td style="text-align:right">64.7012</td><td style="text-align:right">-20.9778</td><td>未排入主線，位置偏離本次 D7 路線</td></tr><tr><td style="text-align:right">㉚</td><td>大陸橋（Bridge Between Continents）</td><td style="text-align:right">63.8682</td><td style="text-align:right">-22.6751</td><td>未排入本次主線</td></tr><tr><td style="text-align:right">㉛</td><td>Gunnuhver 地熱區（Gunnuhver）</td><td style="text-align:right">63.8193</td><td style="text-align:right">-22.6851</td><td>備用，本次不安排</td></tr></tbody>
+</table></div>
+<hr/>
+</section>
+<section class="resource-panel" id="resources-2"><h2>住宿一覽</h2><div class="accommodation-status">H1–H7 已決定住宿區域，但實際住宿仍待選定；H8（3/14）已確定為 Aurora Hotel at Reykjavik-Keflavik Airport。</div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>住宿</th>
+<th>日期</th>
+<th>區域</th>
+<th>後續選房條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>3/7</td>
+<td>雷克雅維克（Reykjavík）東南側</td>
+<td>3 人、自炊、停車、自助入住</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>3/8</td>
+<td>赫拉（Hella）／鎮外鄉村</td>
+<td>自炊、停車，光害小優先</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>3/9</td>
+<td>維克（Vík）</td>
+<td>自炊公寓、停車</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>3/10</td>
+<td>Hali／Gerði</td>
+<td>靠近 Melrakki 集合區</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>3/11</td>
+<td>同 H4</td>
+<td>第二晚，固定不換住宿</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>3/12</td>
+<td>教堂鎮（Kirkjubæjarklaustur）</td>
+<td>3 人、自炊、停車</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>3/13</td>
+<td>博爾加內斯（Borgarnes）</td>
+<td>3 人、自炊、停車，方便 D8 前往斯奈山</td>
+</tr>
+<tr>
+<td>H8</td>
+<td>3/14</td>
+<td>Aurora Hotel at Reykjavik-Keflavik Airport（Blikavöllur 2）</td>
+<td>已確定；房價 36,567.16 ISK。距航廈約 150 公尺；房型、入住人數及早餐內容依訂單確認。</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+</section>
+<section class="resource-panel" id="resources-7">
+<h2>預算總覽｜已知費用與三人試算</h2>
+<p>本表以 3 人同行為基準。已取得的 Zero Car Rental 租車資料與 Aurora Hotel 房價列為已知費用；油資、停車費為預估；浮潛及冰川活動則沿用廠商附件所列比較價試算，尚不能視為 2027 年正式報價或已付款金額。</p>
+<div class="budget-summary">
+<div class="budget-metric"><span>已知／預估基本費用</span><strong>227,017 ISK</strong><small>約 NT$61,295（匯率 0.27）</small></div>
+<div class="budget-metric"><span>兩項活動費用試算</span><strong>152,697 ISK</strong><small>約 NT$41,228（3 人估算）</small></div>
+<div class="budget-metric"><span>目前可估算總額</span><strong>379,714 ISK</strong><small>約 NT$102,523；每人約 NT$34,174</small></div>
+</div>
+<h3 class="budget-subhead">A. 已知／預估基本費用</h3>
+<div class="table-wrap"><table class="budget-table">
+<thead><tr><th>項目</th><th>內容</th><th class="num">ISK</th><th class="num">TWD（0.27）</th><th>狀態</th></tr></thead>
+<tbody>
+<tr><td>租車總價</td><td>Zero Car Rental；Kia Sportage AWD／4WD；3/7 18:00 取車、3/14 18:00 還車；全險及道路救援包含於方案</td><td class="num">125,450</td><td class="num">33,872</td><td>已提供報價</td></tr>
+<tr><td>預估油資</td><td>全程自駕估算；還車前需滿油</td><td class="num">55,000</td><td class="num">14,850</td><td>預估</td></tr>
+<tr><td>預估停車費</td><td>全程景點及停車場費用預估</td><td class="num">10,000</td><td class="num">2,700</td><td>預估</td></tr>
+<tr><td>H8 最後一晚住宿</td><td>Aurora Hotel at Reykjavik-Keflavik Airport；3/14；房價總額依目前提供資料</td><td class="num">36,567.16</td><td class="num">9,873</td><td>已確定住宿／已知價格</td></tr>
+<tr><th colspan="2">基本費用小計</th><th class="num">227,017.16</th><th class="num">61,295</th><th>含預估項目</th></tr>
+</tbody></table></div>
+<h4>Zero Car Rental 報價拆解</h4>
+<div class="table-wrap"><table class="budget-table">
+<thead><tr><th>報價明細</th><th class="num">ISK</th><th>說明</th></tr></thead>
+<tbody>
+<tr><td>Kia Sportage AWD／4WD 車價</td><td class="num">128,136</td><td>車輛價格</td></tr>
+<tr><td>全險及道路救援</td><td class="num">已含</td><td>保險費未另列金額；依你提供的租車方案內容</td></tr>
+<tr><td>道路稅（Road Tax）</td><td class="num">12,390</td><td>另計項目</td></tr>
+<tr><td>折扣</td><td class="num">-15,076</td><td>已套用折扣</td></tr>
+<tr><th>租車總價</th><th class="num">125,450</th><th>128,136 + 12,390 - 15,076</th></tr>
+</tbody></table></div>
+<div class="budget-callout"><strong>匯率差異：</strong>你提供的租車折合金額為 NT$33,556；但 ISK 125,450 × 0.27 = NT$33,871.50（約 NT$33,872），兩者相差約 NT$316。預算總計為了統一比較，全部採 0.27 換算；租車的 NT$33,556 則保留為原先提供的折合金額，待確認實際刷卡匯率或報價換算方式。</div>
+<h3 class="budget-subhead">B. 活動費用試算｜以每人價格 × 3 人估算</h3>
+<div class="table-wrap"><table class="budget-table">
+<thead><tr><th>活動</th><th>廠商／方案</th><th class="num">附件價格／人</th><th class="num">3 人估算 ISK</th><th class="num">TWD（0.27）</th><th>狀態</th></tr></thead>
+<tbody>
+<tr><td>Silfra 浮潛</td><td>DIVE.IS｜Silfra Snorkeling Tour - Meet on Location</td><td class="num">15,999 起</td><td class="num">47,997 起</td><td class="num">12,959 起</td><td>附件比較價；待確認 2027 場次與正式價格</td></tr>
+<tr><td>冰洞＋冰川健行</td><td>Melrakki Adventures｜JÖKULSÁRLÓN ICE CAVE &amp; GLACIER HIKE</td><td class="num">34,900</td><td class="num">104,700</td><td class="num">28,269</td><td>附件所列價格；暫按每人計算，待業者確認</td></tr>
+<tr><th colspan="3">活動費用小計</th><th class="num">152,697 起</th><th class="num">41,228 起</th><th>三人試算</th></tr>
+</tbody></table></div>
+<h3 class="budget-subhead">C. 目前可估算總額</h3>
+<div class="table-wrap"><table class="budget-table">
+<thead><tr><th>彙總</th><th class="num">ISK</th><th class="num">TWD（0.27）</th><th>備註</th></tr></thead>
+<tbody>
+<tr><td>基本費用小計</td><td class="num">227,017.16</td><td class="num">61,295</td><td>租車、油資、停車、Aurora Hotel</td></tr>
+<tr><td>活動費用小計</td><td class="num">152,697</td><td class="num">41,228</td><td>按每人價格 × 3 人估算</td></tr>
+<tr><th>目前可估算總額</th><th class="num">379,714.16</th><th class="num">102,523</th><th>未含下列尚未報價項目</th></tr>
+<tr><td>平均每人</td><td class="num">126,571.39</td><td class="num">34,174</td><td>僅作三人平均分攤參考</td></tr>
+</tbody></table></div>
+<h3 class="budget-subhead">D. 尚未納入／待補價格</h3>
+<ul>
+<li><strong>H1–H7 七晚住宿：</strong>目前只有區域及條件，尚未取得實際住宿報價。</li>
+<li><strong>機票：</strong>本版規劃未提供票價，因此未計入。</li>
+<li><strong>餐食、超市採買及飲料：</strong>尚無總額，未計入。</li>
+<li><strong>其他臨時支出：</strong>例如額外活動、洗衣、行李寄放、信用卡／匯兌費用等，未計入。</li>
+</ul>
+<p class="budget-footnote">計算說明：ISK 換算 TWD 統一使用 1 ISK = NT$0.27，金額四捨五入至元。DIVE.IS 與 Melrakki 價格取自本文件活動廠商附件的方案比較紀錄，非已取得的 2027 年正式報價；本試算假設列示價格為每人價格，尤其 Melrakki 單價仍應向業者確認。基本費用小計中的油資與停車費為估算，並非已付款金額。</p>
+<hr/>
+</section>
+<section class="resource-panel" id="resources-3"><h2>每日出發前檢查</h2>
+<ul>
+<li><strong>道路狀況：</strong> <a href="https://umferdin.is/" rel="noopener noreferrer" target="_blank">https://umferdin.is/</a> 或 <a href="https://road.is/" rel="noopener noreferrer" target="_blank">https://road.is/</a> — 檢查道路封閉、結冰及冬季服務狀況。</li>
+<li><strong>天氣與風勢：</strong> <a href="https://en.vedur.is/" rel="noopener noreferrer" target="_blank">https://en.vedur.is/</a> — 特別注意強風、陣風、降雪及能見度。</li>
+<li><strong>安全公告：</strong> <a href="https://safetravel.is/" rel="noopener noreferrer" target="_blank">https://safetravel.is/</a> — 查看旅行警示及安全資訊。</li>
+<li><strong>活動通知：</strong> 出發前確認 DIVE.IS、Melrakki 的集合地點、報到時間、取消或改期通知。</li>
+<li><strong>D8 特別檢查：</strong> 出發前確認 Fróðárheiði／54 號公路路段開放及路況。若封閉或不適合行駛，不要勉強穿越；取消 Kirkjufell 北岸段，依安全可行路線返回 Borgarnes，再前往 H8。</li>
+<li><strong>道路封閉：</strong> 不以 Google Maps 或其他導航顯示的路線取代官方道路狀況；遇到封路標示，遵守現場管制。</li>
+</ul>
+<hr/>
+</section>
+<section class="resource-panel" id="resources-4"><h2>預訂與出發前確認清單</h2>
+<ol>
+<li><strong>DIVE.IS：</strong> 確認 3/8 的 Silfra 場次、集合時間及集合點；同時確認若取消，3/14 是否可作唯一候補，以及改期／退款條件。</li>
+<li><strong>Melrakki Adventures：</strong> 確認 3/11 場次、集合時間、集合點、活動總時數、冰上活動內容、3/12 候補優先級及取消／退款政策。不要只依網站上的一般時數推算當日行程。</li>
+<li><strong>H1 雷克雅維克：</strong> 確認 3 人入住、廚房、停車及自助入住方式；採買超市依住宿位置選擇。</li>
+<li><strong>H2 赫拉：</strong> 確認自炊、停車及入住方式，優先考慮鎮外低光害住宿。</li>
+<li><strong>H3 維克：</strong> 確認自炊公寓、停車及入住方式。</li>
+<li><strong>H4／H5 Hali／Gerði：</strong> 確認連住兩晚、停車及前往 Melrakki 集合區的實際車程。</li>
+<li><strong>H6 教堂鎮：</strong> 確認 3 人入住、廚房及停車。</li>
+<li><strong>H7 博爾加內斯：</strong> 確認 3 人入住、廚房及停車；D8 一早需能順利出發。</li>
+<li><strong>H8 Aurora Hotel：</strong> 3/14 已確定入住；確認訂單中的房型、3 人入住、早餐是否包含及取消條款。飯店距機場航廈約 150 公尺。</li>
+<li><strong>Zero Car Rental：</strong> 已知取車 3/7 18:00、還車 3/14 18:00，車型 Kia Sportage AWD／4WD；請提前完成線上 Check-in，留意 Keybox 密碼。還車前汽油車須加滿油，並於 18:00 前完成還車。官方資訊：<a href="https://www.zerocar.is/info/pickup-dropoff-process" rel="noopener noreferrer" target="_blank">取車／還車流程</a>。</li>
+<li><strong>離線地圖：</strong> 預先下載南岸、東南冰河湖、博爾加內斯、斯奈山半島及凱夫拉維克區域地圖，並儲存本文件中的景點座標。</li>
+</ol>
+<hr/>
+</section>
+<section class="resource-panel" id="resources-6">
+<h2>活動廠商附件</h2>
+<p>以下附件內容依據提供的《Iceland_2027_Melrakki_Itinerary》MD 檔補回，保留原始候選、比較數據、最終選擇理由及預訂前確認事項。表列價格為原始資料紀錄，並非 2027 年即時報價。</p>
+<h3>附件 A｜浮潛廠商資料</h3>
+<h4>Excel 原始候選與補充比較</h4>
+<div class="table-wrap">
+<table>
+<thead><tr><th>團名</th><th>營運商</th><th>人數</th><th>時間</th><th>價格 ISK</th><th>定位</th></tr></thead>
+<tbody>
+<tr><td>Silfra Snorkel Day Tour</td><td>Freedive</td><td>6／guide</td><td>2.5 小時</td><td>18,900</td><td>Excel 原始候選</td></tr>
+<tr><td>Silfra Snorkeling Tour Between Tectonic Plates</td><td>Arctic Adventures</td><td>6／guide</td><td>3 小時</td><td>15,990</td><td>Excel 原始候選</td></tr>
+<tr><td>Silfra Snorkeling Tour - Meet on Location</td><td><strong>DIVE.IS</strong></td><td>依當日編組</td><td>約 2.5–3 小時</td><td>15,999 起</td><td><strong>最終選擇，補充比較項</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h4>選擇 DIVE.IS 的原因</h4>
+<p>不以 Excel 原有說明作為評分標準。主要考量：</p>
+<ul>
+<li>Silfra 專門度與成熟的乾式防寒衣流程。</li>
+<li>導遊為受訓的 PADI divemaster／instructor。</li>
+<li>有加熱更衣車，較適合 3 月低溫。</li>
+<li>取消後協調替代方案的流程較成熟。</li>
+<li>對第一次冷水浮潛而言，保暖設備與標準化作業比最低價格更重要。</li>
+</ul>
+<p><strong>最終選擇：</strong> DIVE.IS｜Silfra Snorkeling Tour - Meet on Location</p>
+<p><strong>業者網站：</strong> <a href="https://www.dive.is/" rel="noopener noreferrer" target="_blank">DIVE.IS 官方網站</a></p>
+<hr/>
+<h3>附件 B｜冰川冰洞廠商資料</h3>
+<h4>Excel 原始候選</h4>
+<div class="table-wrap">
+<table>
+<thead><tr><th>團名</th><th>營運商</th><th>人數</th><th>時間</th><th>價格 ISK</th><th>集合點</th><th>定位</th></tr></thead>
+<tbody>
+<tr><td>Blue Ice Caves</td><td>North Tides</td><td>6</td><td>6 小時</td><td>36,900</td><td>Hali</td><td>原始候選</td></tr>
+<tr><td>Ice Cave</td><td>Glacier Trips</td><td>8</td><td>6 小時</td><td>36,900</td><td>Jökulsárlón</td><td>原始候選</td></tr>
+<tr><td>The Epic Blue Ice Cave Adventure</td><td>Glacier Adventure</td><td>8</td><td>6 小時</td><td>36,900</td><td>Hali</td><td>最終比較對象</td></tr>
+<tr><td>Ice Cave and Glacier Exploration Tour</td><td>Ice Explorers</td><td>16</td><td>6 小時</td><td>34,500</td><td>Glacier Lagoon Cafe</td><td>原始候選</td></tr>
+<tr><td>Glacier Hike and a Remote Ice Cave</td><td>Ice Walkers</td><td>6</td><td>6 小時</td><td>36,900</td><td>Jökulsárlón main parking</td><td>原始候選</td></tr>
+<tr><td>Sólheimajökull Glacier Hike and Ice Cave Exploration</td><td>Mountain Guides</td><td>原表未列</td><td>4.5 小時</td><td>22,999</td><td>Sólheimajökull Base Camp</td><td>原始候選</td></tr>
+<tr><td>JÖKULSÁRLÓN ICE CAVE &amp; GLACIER HIKE</td><td><strong>Melrakki Adventures</strong></td><td>原表未列</td><td>7 小時</td><td>34,900</td><td>原表：Skaftafell Booking Center；目前官方：Jökulsárlón 出發</td><td><strong>最終選擇</strong></td></tr>
+<tr><td>Glacier Xtreme - Glacier Hiking &amp; Ice Climbing</td><td>Arctic Adventures</td><td>原表未列</td><td>7.5 小時</td><td>28,490</td><td>Skaftafell</td><td>原始候選</td></tr>
+</tbody>
+</table>
+</div>
+<h4>選擇 Melrakki Adventures 的原因</h4>
+<p>最終選擇 <strong>Melrakki Adventures｜JÖKULSÁRLÓN ICE CAVE &amp; GLACIER HIKE</strong>，理由如下：</p>
+<ul>
+<li>同時符合「冰洞」與「冰川健行」都是旅程核心的偏好。</li>
+<li>業者主打由 Jökulsárlón 出發，探索較遠離主要人潮的冰洞。</li>
+<li>Excel 中的時間約 7 小時，屬較完整的深度活動，而非短程到點拍照。</li>
+<li>可與 Jökulsárlón／Hali 附近連住兩晚搭配，建立 3/11 首次及 3/12 唯一候補。</li>
+<li>相較 The Epic Blue Ice Cave Adventure，Melrakki 更符合偏好的出發區域與避開人潮訴求。</li>
+</ul>
+<p><strong>業者網站：</strong> <a href="https://melrakki.com/" rel="noopener noreferrer" target="_blank">Melrakki Adventures 官方網站</a></p>
+<h4>正式預訂前仍需確認</h4>
+<ol>
+<li>2027/3/11 的實際場次與集合時間。</li>
+<li>每位導遊的最大團體人數。</li>
+<li>實際冰上時間與冰洞停留時間。</li>
+<li>Jökulsárlón 的確切集合位置。</li>
+<li>若 3/11 取消，是否能優先改至 3/12。</li>
+<li>取消、退款及替代活動政策。</li>
+</ol>
+<blockquote><p><strong>價格與場次提醒：</strong> 表列金額及團體資料沿用原始附件紀錄，只供比較參考；實際價格、2027 年場次、集合位置、團體上限、活動內容及取消政策，均應以業者正式訂單與書面回覆為準。</p></blockquote>
+</section><section class="resource-panel" id="resources-5"><h2>參考資料與官方資訊</h2>
+<ul class="source-list">
+<li><a href="https://www.south.is/en/destinations/nature/geopark/kirkjugolf" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Kirkjugólf</a></li>
+<li><a href="https://www.south.is/en/destinations/nature/geopark/systrastapi-and-systra-waterfall" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Systrafoss</a></li>
+<li><a href="https://www.south.is/en/destinations/nature/geopark/foss-a-sidu" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Foss á Síðu</a></li>
+<li><a href="https://www.south.is/en/destinations/popular-tourist-attractions/dverghamrar-dwarf-rocks" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Dverghamrar</a></li>
+<li><a href="https://www.south.is/en/place/laufskalavarda" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Laufskálavarða</a></li>
+<li><a href="https://www.south.is/en/place/kvernufoss-waterfall" rel="noopener noreferrer" target="_blank">Visit South Iceland｜Kvernufoss</a></li>
+<li><a href="https://www.klaustur.is/visitklaustur/skoda-og-sja/astarbrautin" rel="noopener noreferrer" target="_blank">Visit Klaustur｜Ástarbrautin（5 公里環狀步道資訊）</a></li>
+<li><a href="https://umferdin.is/en" rel="noopener noreferrer" target="_blank">冰島道路資訊（umferdin.is）</a>、<a href="https://safetravel.is/" rel="noopener noreferrer" target="_blank">SafeTravel</a></li>
+<li><a href="https://www.zerocar.is/info/pickup-dropoff-process" rel="noopener noreferrer" target="_blank">Zero Car Rental｜機場取車及還車流程</a>、<a href="https://www.zerocar.is/info/faqs" rel="noopener noreferrer" target="_blank">Zero Car Rental｜FAQ</a></li>
+<li><a href="https://www.aurorahotel.is/location" rel="noopener noreferrer" target="_blank">Aurora Hotel｜位置與機場步行資訊</a>、<a href="https://www.aurorahotel.is/" rel="noopener noreferrer" target="_blank">Aurora Hotel｜官方網站</a></li>
+</ul>
+<p class="source-note">景點步行時間為行程規劃預估；2027 年 3 月實際開放、停車方式、步道結冰與道路狀況，請於出發前及當天再次確認。Kvernufoss 由 Skógar 博物館停車場接步道；若步道濕滑、結冰或封閉，請略過。Systrafoss 與 Kirkjugólf 僅安排短停，不包含完整 5 公里 Ástarbrautin 環狀步道。</p>
+</section></main>
+<div class="footer">2027 冰島自駕行程｜租車 3/7 18:00–3/14 18:00；H8 為 Aurora Hotel。車程為規劃估算，請以出發當日道路、天候與業者通知為準。</div>
+</div>
+</body></html>
